@@ -1,5 +1,8 @@
 All for max 300, 200, 100, 50, 20, and 10 generations (fitness threshold: 5000, max score: 400 - at this point it can be assumed that it will go forever)
 
+
+Environments to train in:
+
 1. Random map every time
 2. The same map every time
 3. The same map every time with repeating difficult sections after 5 failed encounters in the same point on the map
@@ -15,13 +18,19 @@ All for max 300, 200, 100, 50, 20, and 10 generations (fitness threshold: 5000, 
 (points 8, 9, and 10 are a bit much but in case the paper is too short they can be useful)
 (in points 8, 9, 10 there has to be one set seed for number generation so when the difficult section is encountered it is known how many fake generations to make to force the program to generate the difficult section again but this time at the start)
 
-All these could be ran for different versions of the game and compared:
 
-1. Static pipes, big gap (GAP: 300)
-2. Static pipes, small gap (GAP: 220)
-3. Moving pipes, big gap (GAP: 300)
-4. Moving pipes, small gap (GAP: 220)
+Tests to make:
 
-(theoretically the game can be sped up as another measure of difficulty and it would create 4 more combinations [it would be 8 in total then])
+1. Compare for different versions of the game
+  - Static pipes, big gap (GAP: 300)
+  - Static pipes, small gap (GAP: 220)
+  - Moving pipes, big gap (GAP: 300)
+  - Moving pipes, small gap (GAP: 220)
+
+(theoretically the game can be sped up as another measure of difficulty and it would create 4 more combinations to compare the genomes in [it would be 8 in total then])
+
 
 All these could be ran for different configurations / different algorithms etc.
+
+On the low side it creates 7 different comparisons (the lower number of environments and only 1 version of the game and only 1 number of generations)
+And on the high side it can be up to 1440 comparisons (assuming all 10 environments, all 8 versions of the game [with speding up], all 6 numbers of generations and let's say 3 different algorithms)
