@@ -44,17 +44,9 @@ def learn_in_display_wrapper(genomes, neat_config):
     clock = pygame.time.Clock() if should_display_game_screen and should_force_30_fps else None
 
     while is_running:
-        if should_display_game_screen:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                    quit()
-            if should_force_30_fps:
-                clock.tick(30)
-
         try:
             birds, pipes, base, running_genomes, nets, score = learn(
-                birds, pipes, base, running_genomes, nets, score, should_display_game_screen)
+                birds, pipes, base, running_genomes, nets, score)
         except Exception as e:
             print(e)
             is_running = False
@@ -62,8 +54,17 @@ def learn_in_display_wrapper(genomes, neat_config):
         if should_display_game_screen:
             draw_window(window, birds, pipes, base, score, GENERATION_NUMBER)
 
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            if should_force_30_fps:
+                clock.tick(30)
 
-def learn(birds, pipes, base, running_genomes, nets, score, should_display_game_screen):
+
+def learn(birds, pipes, base, running_genomes, nets, score):
+    base.move()
+
     next_pipe_to_pass_index = 0
 
     if len(birds) > 0:
@@ -85,8 +86,6 @@ def learn(birds, pipes, base, running_genomes, nets, score, should_display_game_
 
         if neural_network_output[0] > 0.5:
             bird.jump()
-
-    base.move()
 
     removed_pipes = []
     was_pipe_just_passed = False
@@ -158,24 +157,21 @@ def run_trained_genome_in_display_wrapper(genome, neat_config):
     clock = pygame.time.Clock() if should_display_game_screen and should_force_30_fps else None
 
     while is_running:
-        if should_display_game_screen:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                    quit()
-            if should_force_30_fps:
-                clock.tick(30)
-
         try:
-            # refactor (dunno if these things are necessarry to return)
-            score = run_trained_genome(
-                bird, pipes, base, net, score)
+            score = run_trained_genome(bird, pipes, base, net, score)
         except Exception as e:
             print(e)
             is_running = False
 
         if should_display_game_screen:
             draw_window(window, [bird], pipes, base, score, GENERATION_NUMBER)
+
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+            if should_force_30_fps:
+                clock.tick(30)
 
 
 def run_trained_genome(bird, pipes, base, net, score):
