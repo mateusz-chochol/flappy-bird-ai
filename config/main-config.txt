@@ -1,0 +1,9 @@
+[GENERAL_SETTINGS]
+run_mode = "learn"
+
+[LEARN_SETTINGS]
+number_of_generations = 100
+training_mode = "random"
+
+[RUN_TRAINED_SETTINGS]
+genome_name = "feed_forward_best_genome_random_300_generations"

@@ -3,8 +3,8 @@ All for max 300, 200, 100, 50, 20, and 10 generations (fitness threshold: 5000, 
 
 Environments to train in:
 
-1. Random map every time (Done, only moving pipes, small gap for now)
-2. The same map every time (Done, only moving pipes, small gap for now)
+1. Random map every time (Done, {moving pipes, small gap} for now)
+2. The same map every time (Done, only {moving pipes, small gap} for now)
 3. The same map every time with repeating difficult sections after 5 failed encounters in the same point on the map
 4. Random map every time with incresing fitness points per passed pipe (set increases at set points [i.e 10 points per pipe after 100th pipe])
 5. Random map every time with incresing fitness points per passed pipe (linear increase throughout the training)

@@ -4,36 +4,33 @@ pygame.font.init()  # noqa
 from main.neural_networks.feed_forward_neural_network import learn_feed_forward_network, run_trained_feed_forward_network
 from main.standalone_game import run_standalone_game
 from utils.pickle_utils import save_genome, load_genome
-import sys
+from utils.config_utils import read_main_config, get_neat_config
+from models.config import config
 import os
 import neat
 
-
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        local_dir = os.path.dirname(__file__)
-        genomes_dir = os.path.join(local_dir, "saved_genomes")
-        config_path = os.path.join(local_dir, "config/neat-config.txt")
+    local_dir = os.path.dirname(__file__)
+    genomes_dir = os.path.join(local_dir, "saved_genomes")
 
-        neat_config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
-                                  neat.DefaultSpeciesSet, neat.DefaultStagnation, config_path)
+    neat_config = get_neat_config(local_dir)
+    config.set_config(read_main_config(local_dir))
 
-        if sys.argv[1] == "learn":
-            population = neat.Population(neat_config)
-            population.add_reporter(neat.StdOutReporter(True))
-            population.add_reporter(neat.StatisticsReporter())
-            winner_model = population.run(learn_feed_forward_network, 20)
+    run_mode = config.get_run_mode()
 
-            print(f"Best genome: {winner_model}")
-            save_genome(
-                winner_model, "feed_forward_best_genome_no_randomness_20_generations.sav", genomes_dir)
-        elif sys.argv[1] == "run_trained":
-            # add checks if file exists
-            best_genome = load_genome(
-                "feed_forward_best_genome_no_randomness_20_generations.sav", genomes_dir)
-            run_trained_feed_forward_network(best_genome, neat_config)
-    else:
+    if run_mode == "learn":
+        number_of_generations = config.get_number_of_generations()
+        population = neat.Population(neat_config)
+        population.add_reporter(neat.StdOutReporter(True))
+        population.add_reporter(neat.StatisticsReporter())
+        winner_model = population.run(
+            learn_feed_forward_network, number_of_generations)
+
+        print(f"Best genome: {winner_model}")
+        save_genome(winner_model, genomes_dir)
+    elif run_mode == "run_trained":
+        loaded_genome = load_genome(genomes_dir)
+        run_trained_feed_forward_network(loaded_genome, neat_config)
+    elif run_mode == "play_standalone_game":
         while True:
             run_standalone_game()
-
-# Refactor to add types
