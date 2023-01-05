@@ -1,5 +1,5 @@
 [GENERAL_SETTINGS]
-run_mode = "learn"
+run_mode = "run_trained"
 
 [LEARN_SETTINGS]
 number_of_generations = 20
@@ -7,7 +7,7 @@ training_mode = "no_randomness"
 
 [RUN_TRAINED_SETTINGS]
 genome_name = "random_300_generations"
-genome_directory = "300_generations"
+genome_directory = "300 generations"
 
 [DISPLAY_SETTINGS]
 should_display_game_screen = False

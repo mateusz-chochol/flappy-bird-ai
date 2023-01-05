@@ -6,7 +6,7 @@ class Config:
         run_mode = main_config["GENERAL_SETTINGS"]["run_mode"].strip('"')
 
         if run_mode != "learn" and run_mode != "run_trained" and run_mode != "play_standalone_game":
-            raise f"\"{run_mode}\" is not a valid run mode."
+            raise Exception(f"\"{run_mode}\" is not a valid run mode.")
 
         self.run_mode = run_mode
 
@@ -33,13 +33,13 @@ class Config:
         if self.run_mode == "learn":
             return self.number_of_generations
 
-        raise "Program was not ran in the \"learn\" mode."
+        raise Exception("Program was not ran in the \"learn\" mode.")
 
     def get_training_mode(self):
         if self.run_mode == "learn":
             return self.training_mode
 
-        raise "Program was not ran in the \"learn\" mode."
+        raise Exception("Program was not ran in the \"learn\" mode.")
 
     def get_genome_name(self):
         if self.run_mode == "run_trained":
@@ -47,13 +47,14 @@ class Config:
         elif self.run_mode == "learn":
             return f"{self.training_mode}_{self.number_of_generations}_generations"
 
-        raise "Program was not ran in the \"run_trained\" or \"learn\" mode."
+        raise Exception(
+            "Program was not ran in the \"run_trained\" or \"learn\" mode.")
 
     def get_genome_directory(self):
         if self.run_mode == "run_trained":
             return self.genome_directory
 
-        raise "Program was not ran in the \"run_trained\" mode."
+        raise Exception("Program was not ran in the \"run_trained\" mode.")
 
     def get_should_display_game_screen(self):
         return self.should_display_game_screen

@@ -1,7 +1,7 @@
 
 import pygame  # noqa
 pygame.font.init()  # noqa
-from main.neural_networks.feed_forward_neural_network import learn_in_display_wrapper, run_trained_feed_forward_network
+from main.neural_networks.neural_network import learn_in_display_wrapper, run_trained_genome_in_display_wrapper
 from main.standalone_game import run_standalone_game
 from utils.pickle_utils import save_genome, load_genome
 from utils.config_utils import read_main_config, get_neat_config
@@ -32,7 +32,7 @@ if __name__ == "__main__":
         save_genome(winner_model, genomes_dir)
     elif run_mode == "run_trained":
         loaded_genome = load_genome(genomes_dir)
-        run_trained_feed_forward_network(loaded_genome, neat_config)
+        run_trained_genome_in_display_wrapper(loaded_genome, neat_config)
     elif run_mode == "play_standalone_game":
         while True:
             run_standalone_game()
