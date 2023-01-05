@@ -1,9 +1,7 @@
 import pygame
-import random
 import math
 import utils.constants as consts
-
-rng = random.Random(42)
+from globals.random import custom_random
 
 
 class Pipe:
@@ -25,8 +23,7 @@ class Pipe:
         self.set_height()
 
     def set_height(self):
-        # self.gap_height = random.randrange(50, 450)
-        self.gap_height = rng.randrange(50, 450)
+        self.gap_height = custom_random.randrange(50, 450)
         self.bottom_pipe_y = self.gap_height + self.GAP_BETWEEN_PIPES
         self.top_pipe_y = self.gap_height - self.TOP_PIPE_IMG.get_height()
 

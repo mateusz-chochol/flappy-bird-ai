@@ -2,8 +2,13 @@
 run_mode = "learn"
 
 [LEARN_SETTINGS]
-number_of_generations = 100
-training_mode = "random"
+number_of_generations = 20
+training_mode = "no_randomness"
 
 [RUN_TRAINED_SETTINGS]
-genome_name = "feed_forward_best_genome_random_300_generations"
+genome_name = "random_300_generations"
+genome_directory = "300_generations"
+
+[DISPLAY_SETTINGS]
+should_display_game_screen = False
+should_force_30_fps = False

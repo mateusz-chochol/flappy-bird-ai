@@ -18,6 +18,13 @@ class Config:
         elif self.run_mode == "run_trained":
             self.genome_name = main_config["RUN_TRAINED_SETTINGS"]["genome_name"].strip(
                 '"')
+            self.genome_directory = main_config["RUN_TRAINED_SETTINGS"]["genome_directory"].strip(
+                '"')
+
+        self.should_display_game_screen = True if main_config["DISPLAY_SETTINGS"]["should_display_game_screen"].strip(
+            '"') == "True" else False
+        self.should_force_30_fps = True if main_config["DISPLAY_SETTINGS"]["should_force_30_fps"].strip(
+            '"') == "True" else False
 
     def get_run_mode(self):
         return self.run_mode
@@ -38,9 +45,21 @@ class Config:
         if self.run_mode == "run_trained":
             return self.genome_name
         elif self.run_mode == "learn":
-            return f"{self.get_training_mode}_{self.get_number_of_generations}_generations"
+            return f"{self.training_mode}_{self.number_of_generations}_generations"
 
         raise "Program was not ran in the \"run_trained\" or \"learn\" mode."
+
+    def get_genome_directory(self):
+        if self.run_mode == "run_trained":
+            return self.genome_directory
+
+        raise "Program was not ran in the \"run_trained\" mode."
+
+    def get_should_display_game_screen(self):
+        return self.should_display_game_screen
+
+    def get_should_force_30_fps(self):
+        return self.should_force_30_fps
 
 
 config = Config()

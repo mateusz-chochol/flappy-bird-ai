@@ -1,10 +1,12 @@
 import pickle
 import os
-from models.config import config
+from globals.config import config
 
 
-def save_genome(genome, genomes_dir):
-    pathname = os.path.join(genomes_dir,  f"{config.get_genome_name()}.sav")
+def save_genome(genome, all_genomes_dir):
+    genome_dir = os.path.join(
+        all_genomes_dir, f"{config.get_number_of_generations()} generations")
+    pathname = os.path.join(genome_dir,  f"{config.get_genome_name()}.sav")
 
     while os.path.exists(pathname):
         splitted_pathname = os.path.splitext(pathname)
@@ -13,6 +15,7 @@ def save_genome(genome, genomes_dir):
     pickle.dump(genome, open(pathname, 'wb'))
 
 
-def load_genome(genomes_dir):
-    pathname = os.path.join(genomes_dir, f"{config.get_genome_name()}.sav")
+def load_genome(all_genomes_dir):
+    genome_dir = os.path.join(all_genomes_dir, config.get_genome_directory())
+    pathname = os.path.join(genome_dir, f"{config.get_genome_name()}.sav")
     return pickle.load(open(pathname, 'rb'))
