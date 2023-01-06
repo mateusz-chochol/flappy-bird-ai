@@ -7,6 +7,9 @@ training_mode = "no_randomness"
 max_score = 200
 should_repeat_difficult_sections = True
 number_of_fails_before_repeating = 3
+linear_fitness_increase = None
+fitness_increase_step = None
+increasing_fitness_step_value = None
 
 [RUN_TRAINED_SETTINGS]
 genome_name = "random_300_generations"
@@ -22,3 +25,7 @@ gap_between_pipes = 220
 should_pipes_move = True
 pipes_horizontal_velocity = 5
 pipes_vertical_velocity = 2
+
+[LOGGING_SETTINGS]
+should_log_to_console = True
+should_log_to_file = True

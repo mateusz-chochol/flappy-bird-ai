@@ -7,33 +7,35 @@ from utils.pickle_utils import save_genome, load_genome
 from utils.config_utils import read_main_config, get_neat_config
 from globals.config import config
 from globals.custom_random import custom_random
+from middleware.LoggingMiddleware import LoggingMiddleware
 import os
 import neat
 
 if __name__ == "__main__":
     local_dir = os.path.dirname(__file__)
-    genomes_dir = os.path.join(local_dir, "saved_genomes")
 
     neat_config = get_neat_config(local_dir)
     config.set_config(read_main_config(local_dir))
+
     custom_random.set_randomizer_settings()
 
     run_mode = config.get_run_mode()
 
     if run_mode == "learn":
-        number_of_generations = config.get_number_of_generations()
-        population = neat.Population(neat_config)
-        population.add_reporter(neat.StdOutReporter(True))
-        population.add_reporter(neat.StatisticsReporter())
+        with LoggingMiddleware():
+            number_of_generations = config.get_number_of_generations()
+            population = neat.Population(neat_config)
+            population.add_reporter(neat.StdOutReporter(True))
+            population.add_reporter(neat.StatisticsReporter())
 
-        winner_model = population.run(
-            learn_in_display_wrapper, number_of_generations)
+            winner_model = population.run(
+                learn_in_display_wrapper, number_of_generations)
 
-        print(f"Best genome: {winner_model}")
-        save_genome(winner_model, genomes_dir)
+            print(f"Best genome: {winner_model}")
+
+        save_genome(winner_model)
     elif run_mode == "run_trained":
-        loaded_genome = load_genome(genomes_dir)
-
+        loaded_genome = load_genome()
         run_trained_genome_in_display_wrapper(loaded_genome, neat_config)
     elif run_mode == "play_standalone_game":
         while True:

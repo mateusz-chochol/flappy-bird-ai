@@ -1,3 +1,7 @@
+import os
+from utils.constants import GENOMES_DIR
+
+
 class Config:
     def __init__(self):
         pass
@@ -11,12 +15,15 @@ class Config:
         self.run_mode = run_mode
         self.gap_between_pipes = int(
             main_config["GAME_SETTINGS"]["gap_between_pipes"])
-        self.should_pipes_move = True if main_config["GAME_SETTINGS"]["should_pipes_move"].strip(
-            '"') == "True" else False
+        self.should_pipes_move = True if main_config["GAME_SETTINGS"]["should_pipes_move"] == "True" else False
         self.pipes_horizontal_velocity = int(
             main_config["GAME_SETTINGS"]["pipes_horizontal_velocity"])
         self.pipes_vertical_velocity = int(
             main_config["GAME_SETTINGS"]["pipes_vertical_velocity"])
+        self.should_log_to_console = True if main_config[
+            "LOGGING_SETTINGS"]["should_log_to_console"] == "True" else False
+        self.should_log_to_file = True if main_config[
+            "LOGGING_SETTINGS"]["should_log_to_file"] == "True" else False
 
         if self.run_mode == "learn":
             self.number_of_generations = int(
@@ -25,10 +32,16 @@ class Config:
                 '"')
             self.max_score = int(
                 main_config["LEARN_SETTINGS"]["max_score"])
+            self.linear_fitness_increase = int(main_config["LEARN_SETTINGS"]["linear_fitness_increase"]
+                                               ) if main_config["LEARN_SETTINGS"]["linear_fitness_increase"] != "None" else None
+            self.fitness_increase_step = int(main_config["LEARN_SETTINGS"]["fitness_increase_step"]
+                                             ) if main_config["LEARN_SETTINGS"]["fitness_increase_step"] != "None" else None
+            self.increasing_fitness_step_value = int(main_config["LEARN_SETTINGS"]["increasing_fitness_step_value"]
+                                                     ) if main_config["LEARN_SETTINGS"]["increasing_fitness_step_value"] != "None" else None
 
             if self.training_mode == "no_randomness":
-                self.should_repeat_difficult_sections = True if main_config["LEARN_SETTINGS"]["should_repeat_difficult_sections"].strip(
-                    '"') == "True" else False
+                self.should_repeat_difficult_sections = True if main_config[
+                    "LEARN_SETTINGS"]["should_repeat_difficult_sections"] == "True" else False
                 self.number_of_fails_before_repeating = int(
                     main_config["LEARN_SETTINGS"]["number_of_fails_before_repeating"])
 
@@ -40,10 +53,10 @@ class Config:
             self.max_score = int(
                 main_config["RUN_TRAINED_SETTINGS"]["max_score"])
 
-        self.should_display_game_screen = True if main_config["DISPLAY_SETTINGS"]["should_display_game_screen"].strip(
-            '"') == "True" else False
-        self.should_force_30_fps = True if main_config["DISPLAY_SETTINGS"]["should_force_30_fps"].strip(
-            '"') == "True" else False
+        self.should_display_game_screen = True if main_config[
+            "DISPLAY_SETTINGS"]["should_display_game_screen"] == "True" else False
+        self.should_force_30_fps = True if main_config[
+            "DISPLAY_SETTINGS"]["should_force_30_fps"] == "True" else False
 
     def get_run_mode(self):
         return self.run_mode
@@ -113,6 +126,56 @@ class Config:
 
         raise Exception(
             "Program was not run in the \"learn\" mode or training_mode was not set to \"no_randomness\"")
+
+    def get_logs_path(self):
+        if self.run_mode == "learn":
+            logs_relative_path = f"{GENOMES_DIR}\\{self.number_of_generations} generations\\logs\\"
+            logs_filename = f"{self.training_mode}_{self.number_of_generations}_generations"
+
+            if self.training_mode == "no_randomness" and self.should_repeat_difficult_sections:
+                logs_filename = f"{logs_filename}_with_repeats_{self.number_of_fails_before_repeating}"
+
+            logs_pathname = os.path.join(logs_relative_path, logs_filename)
+
+            while os.path.exists(f"{logs_pathname}.txt"):
+                logs_pathname = f"{logs_pathname}_1"
+
+            return f"{logs_pathname}.txt"
+
+        raise Exception("Program was not run in the \"learn\" mode.")
+
+    def get_genome_path(self):
+        if self.run_mode == "learn":
+            genome_relative_path = f"{GENOMES_DIR}\\{self.number_of_generations} generations\\"
+            genome_filename = f"{self.training_mode}_{self.number_of_generations}_generations"
+
+            if self.training_mode == "no_randomness" and self.should_repeat_difficult_sections:
+                genome_filename = f"{genome_filename}_with_repeats_{self.number_of_fails_before_repeating}"
+
+            genome_pathname = os.path.join(
+                genome_relative_path, genome_filename)
+
+            while os.path.exists(f"{genome_pathname}.sav"):
+                genome_pathname = f"{genome_pathname}_1"
+
+            return f"{genome_pathname}.sav"
+
+        raise Exception("Program was not run in the \"learn\" mode.")
+
+    def get_should_log_to_console(self):
+        return self.should_log_to_console
+
+    def get_should_log_to_file(self):
+        return self.should_log_to_file
+
+    def get_linear_fitness_increase(self):
+        return self.linear_fitness_increase
+
+    def get_fitness_increase_step(self):
+        return self.fitness_increase_step
+
+    def get_increasing_fitness_step_value(self):
+        return self.increasing_fitness_step_value
 
 
 config = Config()
