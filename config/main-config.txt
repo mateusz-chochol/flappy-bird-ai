@@ -1,8 +1,10 @@
 [GENERAL_SETTINGS]
+# possible values: "learn", "run_trained", "play_standalone_game"
 run_mode = "learn"
 
 [LEARN_SETTINGS]
 number_of_generations = 100
+# possible values: "random", "no_randomness"
 training_mode = "no_randomness"
 max_score = 200
 should_repeat_difficult_sections = True
