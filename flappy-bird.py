@@ -6,7 +6,7 @@ from main.standalone_game import run_standalone_game
 from utils.pickle_utils import save_genome, load_genome
 from utils.config_utils import read_main_config, get_neat_config
 from globals.config import config
-from globals.random import custom_random
+from globals.custom_random import custom_random
 import os
 import neat
 
@@ -25,6 +25,7 @@ if __name__ == "__main__":
         population = neat.Population(neat_config)
         population.add_reporter(neat.StdOutReporter(True))
         population.add_reporter(neat.StatisticsReporter())
+
         winner_model = population.run(
             learn_in_display_wrapper, number_of_generations)
 
@@ -32,6 +33,7 @@ if __name__ == "__main__":
         save_genome(winner_model, genomes_dir)
     elif run_mode == "run_trained":
         loaded_genome = load_genome(genomes_dir)
+
         run_trained_genome_in_display_wrapper(loaded_genome, neat_config)
     elif run_mode == "play_standalone_game":
         while True:

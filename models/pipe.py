@@ -1,39 +1,38 @@
 import pygame
 import math
 import utils.constants as consts
-from globals.random import custom_random
+from globals.custom_random import custom_random
+from globals.config import config
 
 
 class Pipe:
-    GAP_BETWEEN_PIPES = 220
-    VELOCITY = 5
-
     def __init__(self, starting_x):
         self.x = starting_x
         self.gap_height = 0
         self.top_pipe_y = 0
         self.bottom_pipe_y = 0
         self.current_y_displacement = 0
-        self.BOTTOM_PIPE_IMG = consts.PIPE_IMG
-# maybe refactor it so its not being transformed with every pipe
-        self.TOP_PIPE_IMG = pygame.transform.flip(
-            self.BOTTOM_PIPE_IMG, False, True)
-
+        self.BOTTOM_PIPE_IMG = consts.BOTTOM_PIPE_IMG
+        self.TOP_PIPE_IMG = consts.TOP_PIPE_IMG
         self.has_been_passed = False
         self.set_height()
 
     def set_height(self):
         self.gap_height = custom_random.randrange(50, 450)
-        self.bottom_pipe_y = self.gap_height + self.GAP_BETWEEN_PIPES
+        print("--------")
+        print(self.gap_height)
+        print("--------")
+        self.bottom_pipe_y = self.gap_height + config.get_gap_between_pipes()
         self.top_pipe_y = self.gap_height - self.TOP_PIPE_IMG.get_height()
 
     def move(self):
-        self.x -= self.VELOCITY
+        self.x -= config.get_pipes_horizontal_velocity()
 
-        self.current_y_displacement = (-1 if math.sin(
-            (self.x - self.gap_height) / 100) > 0 else 1) * 2
-        self.bottom_pipe_y -= self.current_y_displacement
-        self.top_pipe_y -= self.current_y_displacement
+        if config.get_should_pipes_move():
+            self.current_y_displacement = (-1 if math.sin(
+                (self.x - self.gap_height) / 100) > 0 else 1) * config.get_pipes_vertical_velocity()
+            self.bottom_pipe_y -= self.current_y_displacement
+            self.top_pipe_y -= self.current_y_displacement
 
     def draw(self, window):
         window.blit(self.BOTTOM_PIPE_IMG, (self.x, self.bottom_pipe_y))
