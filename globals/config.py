@@ -34,12 +34,6 @@ class Config:
                 '"')
             self.max_score = int(
                 main_config["LEARN_SETTINGS"]["max_score"])
-            self.linear_fitness_increase = int(main_config["LEARN_SETTINGS"]["linear_fitness_increase"]
-                                               ) if main_config["LEARN_SETTINGS"]["linear_fitness_increase"] != "None" else None
-            self.fitness_increase_step = int(main_config["LEARN_SETTINGS"]["fitness_increase_step"]
-                                             ) if main_config["LEARN_SETTINGS"]["fitness_increase_step"] != "None" else None
-            self.increasing_fitness_step_value = int(main_config["LEARN_SETTINGS"]["increasing_fitness_step_value"]
-                                                     ) if main_config["LEARN_SETTINGS"]["increasing_fitness_step_value"] != "None" else None
 
             if self.training_mode == "no_randomness":
                 self.should_repeat_difficult_sections = True if main_config[
@@ -180,15 +174,6 @@ class Config:
 
     def get_should_log_to_file(self):
         return self.should_log_to_file
-
-    def get_linear_fitness_increase(self):
-        return self.linear_fitness_increase
-
-    def get_fitness_increase_step(self):
-        return self.fitness_increase_step
-
-    def get_increasing_fitness_step_value(self):
-        return self.increasing_fitness_step_value
 
     def get_hidden_neuron_count(self):
         return self.hidden_neuron_count

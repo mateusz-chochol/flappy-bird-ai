@@ -9,9 +9,6 @@ training_mode = "no_randomness"
 max_score = 400
 should_repeat_difficult_sections = True
 number_of_fails_before_repeating = 3
-linear_fitness_increase = None
-fitness_increase_step = None
-increasing_fitness_step_value = None
 
 [RUN_TRAINED_SETTINGS]
 genome_name = "no_randomness_300_generations"
