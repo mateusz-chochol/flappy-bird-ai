@@ -10,8 +10,8 @@ Training_mode "no_randomness" wasn't ever able to find a solution on its own
 (it always got stuck on some set point really late into the map and it wasn't evolving further fast enough [or at all])
 
 Training_mode "no_randomness" together with repeating difficult sections after 3 attempts resulted in finding a solution under 300 generations
-- 201th generation for 1 neuron in hidden layer
-- 152th generation for 2 neurons in hidden layer
+- 201th generation for 1 neuron in the hidden layer
+- 152th generation for 2 neurons in the hidden layer
 - 262th generation for 3 neurons in the hidden layer
 - 101th generation for 4 neurons in the hidden layer
 - 46th generation for 5 neurons in the hidden layer (what?)
@@ -19,3 +19,5 @@ Training_mode "no_randomness" together with repeating difficult sections after 3
 - 78th generation for 7 neurons in the hidden layer
 - 228th generation for 8 neurons in the hidden layer
 - 132th generation for 9 neurons in the hidden layer
+- 145th generation for 10 neurons in the hidden layer
+- 182th generation for 15 neurons in the hidden layer

@@ -7,6 +7,7 @@ WIN_HEIGHT = 800
 IMGS_DIR = "imgs"
 CONFIG_DIR = 'config'
 GENOMES_DIR = "saved_genomes"
+LOGS_DIR = "logs"
 
 BIRD_IMGS = [load_image(img_name, IMGS_DIR)
              for img_name in ["bird1.png", "bird2.png", "bird3.png"]]

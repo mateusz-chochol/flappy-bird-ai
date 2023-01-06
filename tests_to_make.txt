@@ -6,20 +6,13 @@ And then take this genome and train it on smaller gaps + moving pipes (and compa
 
 Environments to train in:
 
-1. Random map every time (Done, {moving pipes, small gap} for now)
-2. The same map every time (Done, only {moving pipes, small gap} for now)
-3. The same map every time with repeating difficult sections after 5 failed encounters in the same point on the map
-4. Random map every time with incresing fitness points per passed pipe (set increases at set points [i.e 10 points per pipe after 100th pipe])
-5. Random map every time with incresing fitness points per passed pipe (linear increase throughout the training)
-6. The same map every time with repeating difficult sections after 5 failed encounters in the same point on the map and with incresing fitness points per passed pipe (set increases at set points [i.e 10 points per pipe after 100th pipe])
-7. The same map every time with repeating difficult sections after 5 failed encounters in the same point on the map and with incresing fitness points per passed pipe (linear increase throughout the training)
-
-8. Random map every time with immediate repeats of difficult sections (back to random immediately after successfully passing the first pipe)
-9. Random map every time with immediate repeats of difficult sections (back to random immediately after successfully passing the first pipe) and with incresing fitness points per passed pipe (set increases at set points [i.e 10 points per pipe after 100th pipe])
-10. Random map every time with immediate repeats of difficult sections (back to random immediately after successfully passing the first pipe) and with incresing fitness points per passed pipe (linear increase throughout the training)
-
-(points 8, 9, and 10 are a bit much but in case the paper is too short they can be useful)
-(in points 8, 9, 10 there has to be one set seed for number generation so when the difficult section is encountered it is known how many fake generations to make to force the program to generate the difficult section again but this time at the start)
+1. NEAT - Random map every time
+2. NEAT - The same map every time
+3. NEAT - The same map every time with repeating difficult sections after 3 failed encounters in the same point on the map
+4. Q-Learning - Random map every time
+5. Q-Learning - The same map every time
+6. Q-Learning - The same map every time with repeating difficult sections after 3 failed encounters in the same point on the map
+7. Test NEAT with 1 - 10 and 15 neurons in the hidden layer
 
 Regarding the repeats - maybe a good strategy would be to not reset fitness of the genomes back to 0 when repeating the difficult sections, but scale it down a bit (so still the best genome is the one that got the highest previously)
 
@@ -32,9 +25,3 @@ Tests to make:
   - Moving pipes, small gap (GAP: 220)
 
 (theoretically the game can be sped up as another measure of difficulty and it would create 4 more combinations to compare the genomes in [it would be 8 in total then])
-
-
-All these could be ran for different configurations / different algorithms etc.
-
-On the low side it creates 7 different comparisons (the lower number of environments and only 1 version of the game and only 1 number of generations)
-And on the high side it can be up to 1440 comparisons (assuming all 10 environments, all 8 versions of the game [with speding up], all 6 numbers of generations and let's say 3 different algorithms)

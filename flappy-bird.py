@@ -3,15 +3,13 @@ import pygame  # noqa
 pygame.font.init()  # noqa
 from main.neural_networks.neural_network import learn_in_display_wrapper, run_trained_genome_in_display_wrapper
 from main.standalone_game import run_standalone_game
-from utils.pickle_utils import save_genome, load_genome
+from utils.pickle_utils import save_genome, load_genome, create_genome_directories
 from utils.config_utils import read_main_config, get_neat_config
 from globals.config import config
 from globals.custom_random import custom_random
 from middleware.LoggingMiddleware import LoggingMiddleware
 import os
 import neat
-
-# CHANGE HIDDEN NEURON BACK TO 1 !!!
 
 if __name__ == "__main__":
     local_dir = os.path.dirname(__file__)
@@ -21,6 +19,8 @@ if __name__ == "__main__":
     config.set_config(main_config, neat_config)
 
     custom_random.set_randomizer_settings()
+
+    create_genome_directories()
 
     run_mode = config.get_run_mode()
 

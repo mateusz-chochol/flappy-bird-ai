@@ -1,5 +1,5 @@
 import os
-from utils.constants import GENOMES_DIR
+from utils.constants import GENOMES_DIR, LOGS_DIR
 
 
 class Config:
@@ -139,10 +139,8 @@ class Config:
 
     def get_logs_path(self):
         if self.run_mode == "learn":
-            logs_relative_path = f"{GENOMES_DIR}\\{self.hidden_neuron_count} neuron\\{self.number_of_generations} generations\\logs\\"
+            logs_relative_path = f"{GENOMES_DIR}\\{self.hidden_neuron_count} neuron\\{self.number_of_generations} generations\\{LOGS_DIR}\\"
             logs_filename = f"{self.training_mode}_{self.number_of_generations}_generations"
-
-            # add creating directories if not exist
 
             if self.training_mode == "no_randomness" and self.should_repeat_difficult_sections:
                 logs_filename = f"{logs_filename}_with_repeats_{self.number_of_fails_before_repeating}"
@@ -160,8 +158,6 @@ class Config:
         if self.run_mode == "learn":
             genome_relative_path = f"{GENOMES_DIR}\\{self.hidden_neuron_count} neuron\\{self.number_of_generations} generations\\"
             genome_filename = f"{self.training_mode}_{self.number_of_generations}_generations"
-
-            # add creating directories if not exist
 
             if self.training_mode == "no_randomness" and self.should_repeat_difficult_sections:
                 genome_filename = f"{genome_filename}_with_repeats_{self.number_of_fails_before_repeating}"
