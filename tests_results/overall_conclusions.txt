@@ -1,0 +1,21 @@
+Generally more generations in training result in finding better genomes
+
+Genomes trained without any hidden neurons were the fastest at the early stages but weren't able to find a solution in the end
+
+So far the genome that got the highest fitness (8309) was trained in a "random" training_mode and with 1 neuron in the hidden layer
+(it crashed around 470 points but finished due to crossing fitness threshold of 5000)
+(later the threshold for ending the run due to high score was lowered to 400, but it would be safe to assume that one of "no_randomness with repeats" would got it)
+
+Training_mode "no_randomness" wasn't ever able to find a solution on its own
+(it always got stuck on some set point really late into the map and it wasn't evolving further fast enough [or at all])
+
+Training_mode "no_randomness" together with repeating difficult sections after 3 attempts resulted in finding a solution under 300 generations
+- 201th generation for 1 neuron in hidden layer
+- 152th generation for 2 neurons in hidden layer
+- 262th generation for 3 neurons in the hidden layer
+- 101th generation for 4 neurons in the hidden layer
+- 46th generation for 5 neurons in the hidden layer (what?)
+- 54th generation for 6 neurons in the hidden layer
+- 78th generation for 7 neurons in the hidden layer
+- 228th generation for 8 neurons in the hidden layer
+- 132th generation for 9 neurons in the hidden layer

@@ -1,5 +1,8 @@
 All for max 300, 200, 100, 50, 20, and 10 generations (fitness threshold: 5000, max score: 400 - at this point it can be assumed that it will go forever)
 
+Maybe it would be good to train a model on big gaps with static pipes (it should take like 4 generations probably)
+Then take this genome and train it on smaller gaps (maybe it won't take long)
+And then take this genome and train it on smaller gaps + moving pipes (and compare what takes long - this iterative approach to learning or deep dive to the hardest difficulty from the start)
 
 Environments to train in:
 
@@ -18,6 +21,7 @@ Environments to train in:
 (points 8, 9, and 10 are a bit much but in case the paper is too short they can be useful)
 (in points 8, 9, 10 there has to be one set seed for number generation so when the difficult section is encountered it is known how many fake generations to make to force the program to generate the difficult section again but this time at the start)
 
+Regarding the repeats - maybe a good strategy would be to not reset fitness of the genomes back to 0 when repeating the difficult sections, but scale it down a bit (so still the best genome is the one that got the highest previously)
 
 Tests to make:
 

@@ -6,7 +6,7 @@ run_mode = "learn"
 number_of_generations = 300
 # possible values: "random", "no_randomness"
 training_mode = "no_randomness"
-max_score = 300
+max_score = 400
 should_repeat_difficult_sections = True
 number_of_fails_before_repeating = 3
 linear_fitness_increase = None
@@ -14,8 +14,9 @@ fitness_increase_step = None
 increasing_fitness_step_value = None
 
 [RUN_TRAINED_SETTINGS]
-genome_name = "random_300_generations"
+genome_name = "no_randomness_300_generations"
 genome_directory = "300 generations"
+neuron_directory = "1 neuron"
 max_score = 400
 
 [DISPLAY_SETTINGS]

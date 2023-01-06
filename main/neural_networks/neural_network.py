@@ -30,8 +30,9 @@ def learn_in_display_wrapper(genomes, neat_config):
     custom_random.reset_seed_if_necessarry()
 
     if (should_repeat_difficult_sections and NUMBER_OF_FAILS_AT_THE_SAME_POINT >= config.get_number_of_fails_before_repeating()) or IS_REPEATING_DIFFICULT_SECTION:
-        print(
-            f"Generating difficult section (seen at score: {LAST_FAILED_SCORE})")
+        if LAST_FAILED_SCORE != 0:
+            print(
+                f"Generating difficult section (seen at score: {LAST_FAILED_SCORE})\n")
         custom_random.setstate(custom_random.get_previous_state())
         IS_REPEATING_DIFFICULT_SECTION = True
 
@@ -93,7 +94,7 @@ def learn(learning_birds, pipes, base, score):
         if len(pipes) > 1 and learning_birds[0].bird.x > pipes[0].x + pipes[0].TOP_PIPE_IMG.get_width():
             next_pipe_to_pass_index = 1
     else:
-        raise Exception("All birds are dead. End of evolution.")
+        raise Exception("\nAll birds are dead. End of generation.\n")
 
     for i, learning_bird in enumerate(learning_birds):
         learning_birds[i].genome.fitness += 0.1
@@ -156,10 +157,12 @@ def learn(learning_birds, pipes, base, score):
 
 
 def run_trained_genome_in_display_wrapper(genome, neat_config):
+    # add some print about what configuration is about to run + add waiting 2s before starting running
+
     should_display_game_screen = config.get_should_display_game_screen()
     should_force_30_fps = config.get_should_force_30_fps()
 
-# move these values to consts
+    # move these values to consts
     bird = Bird(230, 350)
     base = Base(730)
     pipes = [Pipe(600)]

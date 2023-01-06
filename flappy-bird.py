@@ -11,11 +11,14 @@ from middleware.LoggingMiddleware import LoggingMiddleware
 import os
 import neat
 
+# CHANGE HIDDEN NEURON BACK TO 1 !!!
+
 if __name__ == "__main__":
     local_dir = os.path.dirname(__file__)
 
     neat_config = get_neat_config(local_dir)
-    config.set_config(read_main_config(local_dir))
+    main_config = read_main_config(local_dir)
+    config.set_config(main_config, neat_config)
 
     custom_random.set_randomizer_settings()
 

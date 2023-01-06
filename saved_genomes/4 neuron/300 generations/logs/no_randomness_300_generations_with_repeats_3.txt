@@ -1,0 +1,2855 @@
+
+ ****** Running generation 0 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.49000 stdev: 0.93500
+Best fitness: 6.10000 - size: (5, 20) - species 9 - id 9
+Average adjusted fitness: 0.313
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    0     2      3.3    0.263     0
+     2    0     2      2.3    0.000     0
+     3    0     2      3.4    0.289     0
+     4    0     2      2.3    0.000     0
+     5    0     2      3.1    0.211     0
+     6    0     2      4.9    0.684     0
+     7    0     2      3.3    0.263     0
+     8    0     2      5.7    0.895     0
+     9    0     2      6.1    1.000     0
+    10    0     2      3.3    0.263     0
+    11    0     2      3.4    0.289     0
+    12    0     2      3.3    0.263     0
+    13    0     2      3.5    0.316     0
+    14    0     2      3.3    0.263     0
+    15    0     2      2.3    0.000     0
+    16    0     2      3.4    0.289     0
+    17    0     2      3.3    0.263     0
+    18    0     2      3.6    0.342     0
+    19    0     2      3.3    0.263     0
+    20    0     2      3.4    0.289     0
+    21    0     2      2.3    0.000     0
+    22    0     2      3.3    0.263     0
+    23    0     2      3.5    0.316     0
+    24    0     2      5.7    0.895     0
+    25    0     2      3.3    0.263     0
+    26    0     2      3.4    0.289     0
+    27    0     2      3.3    0.263     0
+    28    0     2      3.5    0.316     0
+    29    0     2      3.6    0.342     0
+    30    0     2      2.3    0.000     0
+Total extinctions: 0
+Generation time: 0.262 sec
+
+ ****** Running generation 1 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 1
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.69333 stdev: 2.56832
+Best fitness: 22.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.071
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    1     2      3.5    0.056     0
+     2    1     2      3.3    0.025     0
+     3    1     2      3.3    0.025     1
+     4    1     2      2.4    0.003     0
+     5    1     2      3.4    0.048     0
+     6    1     2      4.9    0.066     1
+     7    1     2      3.4    0.053     0
+     8    1     2      5.7    0.112     1
+     9    1     2      6.1    0.190     1
+    10    1     2      3.6    0.058     0
+    11    1     2     22.0    0.528     0
+    12    1     2      3.4    0.053     0
+    13    1     2      3.4    0.053     1
+    14    1     2      5.3    0.102     0
+    15    1     2      2.5    0.005     0
+    16    1     2      3.4    0.053     1
+    17    1     2      3.3    0.025     1
+    18    1     2      3.5    0.056     1
+    19    1     2      3.4    0.028     0
+    20    1     2      3.5    0.056     0
+    21    1     2      2.4    0.003     0
+    22    1     2      3.5    0.056     0
+    23    1     2      3.6    0.058     0
+    24    1     2      5.8    0.089     0
+    25    1     2      3.4    0.053     0
+    26    1     2      3.3    0.025     1
+    27    1     2      6.0    0.119     0
+    28    1     2      3.4    0.053     1
+    29    1     2      3.7    0.061     0
+    30    1     2      2.6    0.008     0
+Total extinctions: 0
+Generation time: 0.535 sec (0.399 average)
+
+ ****** Running generation 2 ****** 
+
+Collision of the last bird, score: 1
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.70000 stdev: 2.56807
+Best fitness: 22.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.071
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    2     2      3.5    0.056     1
+     2    2     2      3.3    0.025     1
+     3    2     2      3.3    0.025     2
+     4    2     2      2.4    0.003     1
+     5    2     2      3.3    0.046     1
+     6    2     2      4.9    0.066     2
+     7    2     2      3.4    0.053     1
+     8    2     2      5.7    0.112     2
+     9    2     2      6.1    0.190     2
+    10    2     2      3.5    0.056     1
+    11    2     2     22.0    0.525     1
+    12    2     2      3.6    0.058     0
+    13    2     2      3.7    0.061     0
+    14    2     2      5.3    0.102     1
+    15    2     2      2.4    0.003     1
+    16    2     2      3.4    0.053     2
+    17    2     2      3.4    0.028     0
+    18    2     2      3.4    0.053     2
+    19    2     2      3.4    0.028     1
+    20    2     2      3.6    0.058     0
+    21    2     2      2.5    0.005     0
+    22    2     2      3.4    0.053     1
+    23    2     2      3.4    0.053     1
+    24    2     2      5.8    0.089     1
+    25    2     2      3.5    0.056     0
+    26    2     2      3.5    0.030     0
+    27    2     2      6.0    0.119     1
+    28    2     2      3.4    0.053     2
+    29    2     2      3.8    0.063     0
+    30    2     2      2.6    0.008     1
+Total extinctions: 0
+Generation time: 0.540 sec (0.446 average)
+
+ ****** Running generation 3 ****** 
+
+Collision of the last bird, score: 1
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.70000 stdev: 2.56807
+Best fitness: 22.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.071
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    3     2      3.4    0.053     2
+     2    3     2      3.3    0.025     2
+     3    3     2      3.4    0.028     3
+     4    3     2      2.4    0.003     2
+     5    3     2      3.3    0.046     2
+     6    3     2      4.9    0.066     3
+     7    3     2      3.4    0.053     2
+     8    3     2      5.7    0.112     3
+     9    3     2      6.1    0.190     3
+    10    3     2      3.6    0.058     2
+    11    3     2     22.0    0.525     2
+    12    3     2      3.4    0.053     1
+    13    3     2      3.4    0.053     1
+    14    3     2      5.3    0.102     2
+    15    3     2      2.5    0.005     2
+    16    3     2      3.6    0.058     0
+    17    3     2      3.5    0.030     0
+    18    3     2      3.4    0.053     3
+    19    3     2      3.3    0.025     2
+    20    3     2      3.5    0.056     1
+    21    3     2      2.4    0.003     1
+    22    3     2      3.5    0.056     2
+    23    3     2      3.7    0.061     0
+    24    3     2      5.8    0.089     2
+    25    3     2      3.5    0.056     1
+    26    3     2      3.4    0.028     1
+    27    3     2      6.0    0.119     2
+    28    3     2      3.4    0.053     3
+    29    3     2      3.8    0.063     1
+    30    3     2      2.6    0.008     2
+Total extinctions: 0
+Generation time: 0.535 sec (0.468 average)
+
+ ****** Running generation 4 ****** 
+
+Generating difficult section (seen at score: 1)
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.43833 stdev: 1.06005
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.242
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    4     2      3.4    0.223     3
+     2    4     2      3.3    0.106     3
+     3    4     2      3.5    0.128     0
+     4    4     2      2.4    0.011     3
+     5    4     2      3.4    0.223     3
+     6    4     2      5.3    0.319     0
+     7    4     2      3.4    0.223     3
+     8    4     2      3.4    0.223     4
+     9    4     2      3.4    0.223     4
+    10    4     2      3.6    0.245     3
+    11    4     2      7.0    0.862     3
+    12    4     2      3.5    0.234     2
+    13    4     2      3.4    0.223     2
+    14    4     2      4.8    0.372     3
+    15    4     2      2.4    0.011     3
+    16    4     2      3.4    0.223     1
+    17    4     2      6.0    0.394     0
+    18    4     2      3.4    0.223     4
+    19    4     2      2.4    0.011     3
+    20    4     2      3.5    0.234     2
+    21    4     2      2.5    0.021     2
+    22    4     2      3.4    0.223     3
+    23    4     2      3.4    0.223     1
+    24    4     2      3.5    0.128     3
+    25    4     2      3.3    0.106     2
+    26    4     2      5.4    0.649     0
+    27    4     2      5.2    0.415     3
+    28    4     2      5.3    0.628     0
+    29    4     2      3.5    0.128     2
+    30    4     2      2.6    0.032     3
+Total extinctions: 0
+Generation time: 0.502 sec (0.475 average)
+
+ ****** Running generation 5 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    5     2      3.4    0.223     4
+     2    5     2      3.3    0.106     4
+     3    5     2      3.3    0.106     1
+     4    5     2      2.4    0.011     4
+     5    5     2      3.5    0.234     0
+     6    5     2      5.3    0.319     1
+     7    5     2      3.4    0.223     4
+     8    5     2      3.5    0.234     5
+     9    5     2      3.4    0.223     5
+    10    5     2      3.4    0.223     4
+    11    5     2      7.0    0.862     4
+    12    5     2      3.6    0.245     3
+    13    5     2      3.5    0.234     3
+    14    5     2      4.8    0.372     4
+    15    5     2      2.5    0.021     4
+    16    5     2      3.7    0.255     0
+    17    5     2      6.0    0.394     1
+    18    5     2      3.6    0.245     5
+    19    5     2      2.4    0.011     4
+    20    5     2      3.4    0.223     3
+    21    5     2      2.6    0.032     0
+    22    5     2      3.4    0.223     4
+    23    5     2      3.4    0.223     2
+    24    5     2      3.3    0.106     4
+    25    5     2      3.4    0.117     3
+    26    5     2      5.4    0.649     1
+    27    5     2      5.2    0.415     4
+    28    5     2      5.3    0.628     1
+    29    5     2      3.5    0.128     3
+    30    5     2      2.4    0.011     4
+Total extinctions: 0
+Generation time: 0.502 sec (0.479 average)
+
+ ****** Running generation 6 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    6     2      3.6    0.245     0
+     2    6     2      3.3    0.106     5
+     3    6     2      3.4    0.117     2
+     4    6     2      2.4    0.011     5
+     5    6     2      3.5    0.234     1
+     6    6     2      5.3    0.319     2
+     7    6     2      3.4    0.223     5
+     8    6     2      3.6    0.245     6
+     9    6     2      3.4    0.223     6
+    10    6     2      3.4    0.223     5
+    11    6     2      7.0    0.862     5
+    12    6     2      3.5    0.234     4
+    13    6     2      3.4    0.223     4
+    14    6     2      4.8    0.372     5
+    15    6     2      2.6    0.032     0
+    16    6     2      3.4    0.223     1
+    17    6     2      6.0    0.394     2
+    18    6     2      3.4    0.223     6
+    19    6     2      2.5    0.021     5
+    20    6     2      3.7    0.255     0
+    21    6     2      2.4    0.011     1
+    22    6     2      3.4    0.223     5
+    23    6     2      3.5    0.234     3
+    24    6     2      3.3    0.106     5
+    25    6     2      3.5    0.128     4
+    26    6     2      5.4    0.649     2
+    27    6     2      5.2    0.415     5
+    28    6     2      5.3    0.628     2
+    29    6     2      3.3    0.106     4
+    30    6     2      2.4    0.011     5
+Total extinctions: 0
+Generation time: 0.501 sec (0.483 average)
+
+ ****** Running generation 7 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    7     2      3.4    0.223     1
+     2    7     2      3.3    0.106     6
+     3    7     2      3.5    0.128     3
+     4    7     2      2.4    0.011     6
+     5    7     2      3.4    0.223     2
+     6    7     2      5.3    0.319     3
+     7    7     2      3.4    0.223     6
+     8    7     2      3.5    0.234     7
+     9    7     2      3.4    0.223     7
+    10    7     2      3.5    0.234     6
+    11    7     2      7.0    0.862     6
+    12    7     2      3.6    0.245     5
+    13    7     2      3.4    0.223     5
+    14    7     2      4.8    0.372     6
+    15    7     2      2.4    0.011     1
+    16    7     2      3.4    0.223     2
+    17    7     2      6.0    0.394     3
+    18    7     2      3.7    0.255     0
+    19    7     2      2.6    0.032     6
+    20    7     2      3.4    0.223     1
+    21    7     2      2.4    0.011     2
+    22    7     2      3.6    0.245     0
+    23    7     2      3.5    0.234     4
+    24    7     2      3.4    0.117     6
+    25    7     2      3.3    0.106     5
+    26    7     2      5.4    0.649     3
+    27    7     2      5.2    0.415     6
+    28    7     2      5.3    0.628     3
+    29    7     2      3.3    0.106     5
+    30    7     2      2.5    0.021     6
+Total extinctions: 0
+Generation time: 0.502 sec (0.485 average)
+
+ ****** Running generation 8 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    8     2      3.7    0.255     0
+     2    8     2      3.3    0.106     7
+     3    8     2      3.3    0.106     4
+     4    8     2      2.4    0.011     7
+     5    8     2      3.4    0.223     3
+     6    8     2      5.3    0.319     4
+     7    8     2      3.4    0.223     7
+     8    8     2      3.6    0.245     8
+     9    8     2      3.6    0.245     8
+    10    8     2      3.5    0.234     7
+    11    8     2      7.0    0.862     7
+    12    8     2      3.5    0.234     6
+    13    8     2      3.4    0.223     6
+    14    8     2      4.8    0.372     7
+    15    8     2      2.4    0.011     2
+    16    8     2      3.5    0.234     3
+    17    8     2      6.0    0.394     4
+    18    8     2      3.4    0.223     1
+    19    8     2      2.4    0.011     7
+    20    8     2      3.4    0.223     2
+    21    8     2      2.5    0.021     3
+    22    8     2      3.4    0.223     1
+    23    8     2      3.4    0.223     5
+    24    8     2      3.5    0.128     7
+    25    8     2      3.3    0.106     6
+    26    8     2      5.4    0.649     4
+    27    8     2      5.2    0.415     7
+    28    8     2      5.3    0.628     4
+    29    8     2      3.4    0.117     6
+    30    8     2      2.6    0.032     7
+Total extinctions: 0
+Generation time: 0.512 sec (0.488 average)
+
+ ****** Running generation 9 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1    9     2      3.4    0.223     1
+     2    9     2      3.3    0.106     8
+     3    9     2      3.3    0.106     5
+     4    9     2      2.4    0.011     8
+     5    9     2      3.4    0.223     4
+     6    9     2      5.3    0.319     5
+     7    9     2      3.4    0.223     8
+     8    9     2      3.5    0.234     9
+     9    9     2      3.4    0.223     9
+    10    9     2      3.4    0.223     8
+    11    9     2      7.0    0.862     8
+    12    9     2      3.6    0.245     7
+    13    9     2      3.6    0.245     7
+    14    9     2      4.8    0.372     8
+    15    9     2      2.5    0.021     3
+    16    9     2      3.5    0.234     4
+    17    9     2      6.0    0.394     5
+    18    9     2      3.4    0.223     2
+    19    9     2      2.4    0.011     8
+    20    9     2      3.5    0.234     3
+    21    9     2      2.6    0.032     4
+    22    9     2      3.7    0.255     0
+    23    9     2      3.4    0.223     6
+    24    9     2      3.3    0.106     8
+    25    9     2      3.4    0.117     7
+    26    9     2      5.4    0.649     5
+    27    9     2      5.2    0.415     8
+    28    9     2      5.3    0.628     5
+    29    9     2      3.5    0.128     7
+    30    9     2      2.4    0.011     8
+Total extinctions: 0
+Generation time: 0.500 sec (0.489 average)
+
+ ****** Running generation 10 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   10     2      3.4    0.223     2
+     2   10     2      3.3    0.106     9
+     3   10     2      3.4    0.117     6
+     4   10     2      2.4    0.011     9
+     5   10     2      3.6    0.245     0
+     6   10     2      5.3    0.319     6
+     7   10     2      3.4    0.223     9
+     8   10     2      3.6    0.245    10
+     9   10     2      3.7    0.255    10
+    10   10     2      3.4    0.223     9
+    11   10     2      7.0    0.862     9
+    12   10     2      3.5    0.234     8
+    13   10     2      3.4    0.223     8
+    14   10     2      4.8    0.372     9
+    15   10     2      2.6    0.032     4
+    16   10     2      3.4    0.223     5
+    17   10     2      6.0    0.394     6
+    18   10     2      3.5    0.234     3
+    19   10     2      2.5    0.021     9
+    20   10     2      3.5    0.234     4
+    21   10     2      2.4    0.011     5
+    22   10     2      3.4    0.223     1
+    23   10     2      3.4    0.223     7
+    24   10     2      3.3    0.106     9
+    25   10     2      3.5    0.128     8
+    26   10     2      5.4    0.649     6
+    27   10     2      5.2    0.415     9
+    28   10     2      5.3    0.628     6
+    29   10     2      3.3    0.106     8
+    30   10     2      2.4    0.011     9
+Total extinctions: 0
+Generation time: 0.516 sec (0.515 average)
+
+ ****** Running generation 11 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   11     2      3.5    0.234     3
+     2   11     2      3.3    0.106    10
+     3   11     2      3.5    0.128     7
+     4   11     2      2.4    0.011    10
+     5   11     2      3.4    0.223     1
+     6   11     2      5.3    0.319     7
+     7   11     2      3.4    0.223    10
+     8   11     2      3.5    0.234    11
+     9   11     2      3.4    0.223    11
+    10   11     2      3.4    0.223    10
+    11   11     2      7.0    0.862    10
+    12   11     2      3.6    0.245     9
+    13   11     2      3.7    0.255     9
+    14   11     2      4.8    0.372    10
+    15   11     2      2.4    0.011     5
+    16   11     2      3.4    0.223     6
+    17   11     2      6.0    0.394     7
+    18   11     2      3.5    0.234     4
+    19   11     2      2.6    0.032    10
+    20   11     2      3.4    0.223     5
+    21   11     2      2.4    0.011     6
+    22   11     2      3.4    0.223     2
+    23   11     2      3.6    0.245     8
+    24   11     2      3.4    0.117    10
+    25   11     2      3.3    0.106     9
+    26   11     2      5.4    0.649     7
+    27   11     2      5.2    0.415    10
+    28   11     2      5.3    0.628     7
+    29   11     2      3.3    0.106     9
+    30   11     2      2.5    0.021    10
+Total extinctions: 0
+Generation time: 0.512 sec (0.512 average)
+
+ ****** Running generation 12 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   12     2      3.5    0.234     4
+     2   12     2      3.3    0.106    11
+     3   12     2      3.3    0.106     8
+     4   12     2      2.4    0.011    11
+     5   12     2      3.7    0.255     0
+     6   12     2      5.3    0.319     8
+     7   12     2      3.4    0.223    11
+     8   12     2      3.6    0.245    12
+     9   12     2      3.4    0.223    12
+    10   12     2      3.6    0.245    11
+    11   12     2      7.0    0.862    11
+    12   12     2      3.5    0.234    10
+    13   12     2      3.4    0.223    10
+    14   12     2      4.8    0.372    11
+    15   12     2      2.4    0.011     6
+    16   12     2      3.4    0.223     7
+    17   12     2      6.0    0.394     8
+    18   12     2      3.4    0.223     5
+    19   12     2      2.4    0.011    11
+    20   12     2      3.4    0.223     6
+    21   12     2      2.5    0.021     7
+    22   12     2      3.5    0.234     3
+    23   12     2      3.4    0.223     9
+    24   12     2      3.5    0.128    11
+    25   12     2      3.3    0.106    10
+    26   12     2      5.4    0.649     8
+    27   12     2      5.2    0.415    11
+    28   12     2      5.3    0.628     8
+    29   12     2      3.4    0.117    10
+    30   12     2      2.6    0.032    11
+Total extinctions: 0
+Generation time: 0.552 sec (0.514 average)
+
+ ****** Running generation 13 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   13     2      3.4    0.223     5
+     2   13     2      3.3    0.106    12
+     3   13     2      3.3    0.106     9
+     4   13     2      2.4    0.011    12
+     5   13     2      3.4    0.223     1
+     6   13     2      5.3    0.319     9
+     7   13     2      3.4    0.223    12
+     8   13     2      3.5    0.234    13
+     9   13     2      3.5    0.234    13
+    10   13     2      3.4    0.223    12
+    11   13     2      7.0    0.862    12
+    12   13     2      3.6    0.245    11
+    13   13     2      3.4    0.223    11
+    14   13     2      4.8    0.372    12
+    15   13     2      2.5    0.021     7
+    16   13     2      3.6    0.245     8
+    17   13     2      6.0    0.394     9
+    18   13     2      3.4    0.223     6
+    19   13     2      2.4    0.011    12
+    20   13     2      3.4    0.223     7
+    21   13     2      2.6    0.032     8
+    22   13     2      3.5    0.234     4
+    23   13     2      3.7    0.255    10
+    24   13     2      3.3    0.106    12
+    25   13     2      3.4    0.117    11
+    26   13     2      5.4    0.649     9
+    27   13     2      5.2    0.415    12
+    28   13     2      5.3    0.628     9
+    29   13     2      3.5    0.128    11
+    30   13     2      2.4    0.011    12
+Total extinctions: 0
+Generation time: 0.533 sec (0.513 average)
+
+ ****** Running generation 14 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   14     2      3.4    0.223     6
+     2   14     2      3.3    0.106    13
+     3   14     2      3.4    0.117    10
+     4   14     2      2.4    0.011    13
+     5   14     2      3.4    0.223     2
+     6   14     2      5.3    0.319    10
+     7   14     2      3.4    0.223    13
+     8   14     2      3.6    0.245    14
+     9   14     2      3.5    0.234    14
+    10   14     2      3.7    0.255     0
+    11   14     2      7.0    0.862    13
+    12   14     2      3.5    0.234    12
+    13   14     2      3.5    0.234    12
+    14   14     2      4.8    0.372    13
+    15   14     2      2.6    0.032     8
+    16   14     2      3.4    0.223     9
+    17   14     2      6.0    0.394    10
+    18   14     2      3.4    0.223     7
+    19   14     2      2.5    0.021    13
+    20   14     2      3.6    0.245     8
+    21   14     2      2.4    0.011     9
+    22   14     2      3.4    0.223     5
+    23   14     2      3.4    0.223    11
+    24   14     2      3.3    0.106    13
+    25   14     2      3.5    0.128    12
+    26   14     2      5.4    0.649    10
+    27   14     2      5.2    0.415    13
+    28   14     2      5.3    0.628    10
+    29   14     2      3.3    0.106    12
+    30   14     2      2.4    0.011    13
+Total extinctions: 0
+Generation time: 0.525 sec (0.516 average)
+
+ ****** Running generation 15 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   15     2      3.4    0.223     7
+     2   15     2      3.3    0.106    14
+     3   15     2      3.5    0.128    11
+     4   15     2      2.4    0.011    14
+     5   15     2      3.5    0.234     3
+     6   15     2      5.3    0.319    11
+     7   15     2      3.4    0.223    14
+     8   15     2      3.5    0.234    15
+     9   15     2      3.4    0.223    15
+    10   15     2      3.4    0.223     1
+    11   15     2      7.0    0.862    14
+    12   15     2      3.6    0.245    13
+    13   15     2      3.5    0.234    13
+    14   15     2      4.8    0.372    14
+    15   15     2      2.4    0.011     9
+    16   15     2      3.7    0.255    10
+    17   15     2      6.0    0.394    11
+    18   15     2      3.6    0.245     8
+    19   15     2      2.6    0.032    14
+    20   15     2      3.4    0.223     9
+    21   15     2      2.4    0.011    10
+    22   15     2      3.4    0.223     6
+    23   15     2      3.4    0.223    12
+    24   15     2      3.4    0.117    14
+    25   15     2      3.3    0.106    13
+    26   15     2      5.4    0.649    11
+    27   15     2      5.2    0.415    14
+    28   15     2      5.3    0.628    11
+    29   15     2      3.3    0.106    13
+    30   15     2      2.5    0.021    14
+Total extinctions: 0
+Generation time: 0.534 sec (0.519 average)
+
+ ****** Running generation 16 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   16     2      3.6    0.245     8
+     2   16     2      3.3    0.106    15
+     3   16     2      3.3    0.106    12
+     4   16     2      2.4    0.011    15
+     5   16     2      3.5    0.234     4
+     6   16     2      5.3    0.319    12
+     7   16     2      3.4    0.223    15
+     8   16     2      3.6    0.245    16
+     9   16     2      3.4    0.223    16
+    10   16     2      3.4    0.223     2
+    11   16     2      7.0    0.862    15
+    12   16     2      3.5    0.234    14
+    13   16     2      3.4    0.223    14
+    14   16     2      4.8    0.372    15
+    15   16     2      2.4    0.011    10
+    16   16     2      3.4    0.223    11
+    17   16     2      6.0    0.394    12
+    18   16     2      3.4    0.223     9
+    19   16     2      2.4    0.011    15
+    20   16     2      3.7    0.255    10
+    21   16     2      2.5    0.021    11
+    22   16     2      3.4    0.223     7
+    23   16     2      3.5    0.234    13
+    24   16     2      3.5    0.128    15
+    25   16     2      3.3    0.106    14
+    26   16     2      5.4    0.649    12
+    27   16     2      5.2    0.415    15
+    28   16     2      5.3    0.628    12
+    29   16     2      3.4    0.117    14
+    30   16     2      2.6    0.032    15
+Total extinctions: 0
+Generation time: 0.528 sec (0.521 average)
+
+ ****** Running generation 17 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   17     2      3.4    0.223     9
+     2   17     2      3.3    0.106    16
+     3   17     2      3.3    0.106    13
+     4   17     2      2.4    0.011    16
+     5   17     2      3.4    0.223     5
+     6   17     2      5.3    0.319    13
+     7   17     2      3.4    0.223    16
+     8   17     2      3.5    0.234    17
+     9   17     2      3.4    0.223    17
+    10   17     2      3.5    0.234     3
+    11   17     2      7.0    0.862    16
+    12   17     2      3.6    0.245    15
+    13   17     2      3.4    0.223    15
+    14   17     2      4.8    0.372    16
+    15   17     2      2.5    0.021    11
+    16   17     2      3.4    0.223    12
+    17   17     2      6.0    0.394    13
+    18   17     2      3.7    0.255    10
+    19   17     2      2.4    0.011    16
+    20   17     2      3.4    0.223    11
+    21   17     2      2.6    0.032    12
+    22   17     2      3.6    0.245     8
+    23   17     2      3.5    0.234    14
+    24   17     2      3.3    0.106    16
+    25   17     2      3.4    0.117    15
+    26   17     2      5.4    0.649    13
+    27   17     2      5.2    0.415    16
+    28   17     2      5.3    0.628    13
+    29   17     2      3.5    0.128    15
+    30   17     2      2.4    0.011    16
+Total extinctions: 0
+Generation time: 0.522 sec (0.523 average)
+
+ ****** Running generation 18 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   18     2      3.7    0.255    10
+     2   18     2      3.3    0.106    17
+     3   18     2      3.4    0.117    14
+     4   18     2      2.4    0.011    17
+     5   18     2      3.4    0.223     6
+     6   18     2      5.3    0.319    14
+     7   18     2      3.4    0.223    17
+     8   18     2      3.6    0.245    18
+     9   18     2      3.6    0.245    18
+    10   18     2      3.5    0.234     4
+    11   18     2      7.0    0.862    17
+    12   18     2      3.5    0.234    16
+    13   18     2      3.4    0.223    16
+    14   18     2      4.8    0.372    17
+    15   18     2      2.6    0.032    12
+    16   18     2      3.5    0.234    13
+    17   18     2      6.0    0.394    14
+    18   18     2      3.4    0.223    11
+    19   18     2      2.5    0.021    17
+    20   18     2      3.4    0.223    12
+    21   18     2      2.4    0.011    13
+    22   18     2      3.4    0.223     9
+    23   18     2      3.4    0.223    15
+    24   18     2      3.3    0.106    17
+    25   18     2      3.5    0.128    16
+    26   18     2      5.4    0.649    14
+    27   18     2      5.2    0.415    17
+    28   18     2      5.3    0.628    14
+    29   18     2      3.3    0.106    16
+    30   18     2      2.4    0.011    17
+Total extinctions: 0
+Generation time: 0.517 sec (0.524 average)
+
+ ****** Running generation 19 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+Average adjusted fitness: 0.243
+Mean genetic distance 3.523, standard deviation 0.617
+Population of 60 members in 30 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   19     2      3.4    0.223    11
+     2   19     2      3.3    0.106    18
+     3   19     2      3.5    0.128    15
+     4   19     2      2.4    0.011    18
+     5   19     2      3.4    0.223     7
+     6   19     2      5.3    0.319    15
+     7   19     2      3.4    0.223    18
+     8   19     2      3.5    0.234    19
+     9   19     2      3.4    0.223    19
+    10   19     2      3.4    0.223     5
+    11   19     2      7.0    0.862    18
+    12   19     2      3.6    0.245    17
+    13   19     2      3.6    0.245    17
+    14   19     2      4.8    0.372    18
+    15   19     2      2.4    0.011    13
+    16   19     2      3.5    0.234    14
+    17   19     2      6.0    0.394    15
+    18   19     2      3.4    0.223    12
+    19   19     2      2.6    0.032    18
+    20   19     2      3.5    0.234    13
+    21   19     2      2.4    0.011    14
+    22   19     2      3.7    0.255    10
+    23   19     2      3.4    0.223    16
+    24   19     2      3.4    0.117    18
+    25   19     2      3.3    0.106    17
+    26   19     2      5.4    0.649    15
+    27   19     2      5.2    0.415    18
+    28   19     2      5.3    0.628    15
+    29   19     2      3.3    0.106    17
+    30   19     2      2.5    0.021    18
+Total extinctions: 0
+Generation time: 0.527 sec (0.527 average)
+
+ ****** Running generation 20 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44333 stdev: 1.06087
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 8 with 2 members is stagnated: removing it
+
+Species 9 with 2 members is stagnated: removing it
+Average adjusted fitness: 0.243
+Mean genetic distance 3.513, standard deviation 0.635
+Population of 56 members in 28 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   20     2      3.4    0.223    12
+     2   20     2      3.3    0.106    19
+     3   20     2      3.3    0.106    16
+     4   20     2      2.4    0.011    19
+     5   20     2      3.6    0.245     8
+     6   20     2      5.3    0.319    16
+     7   20     2      3.4    0.223    19
+    10   20     2      3.4    0.223     6
+    11   20     2      7.0    0.862    19
+    12   20     2      3.5    0.234    18
+    13   20     2      3.4    0.223    18
+    14   20     2      4.8    0.372    19
+    15   20     2      2.4    0.011    14
+    16   20     2      3.4    0.223    15
+    17   20     2      6.0    0.394    16
+    18   20     2      3.5    0.234    13
+    19   20     2      2.4    0.011    19
+    20   20     2      3.5    0.234    14
+    21   20     2      2.5    0.021    15
+    22   20     2      3.4    0.223    11
+    23   20     2      3.4    0.223    17
+    24   20     2      3.5    0.128    19
+    25   20     2      3.3    0.106    18
+    26   20     2      5.4    0.649    16
+    27   20     2      5.2    0.415    19
+    28   20     2      5.3    0.628    16
+    29   20     2      3.4    0.117    18
+    30   20     2      2.6    0.032    19
+Total extinctions: 0
+Generation time: 0.509 sec (0.526 average)
+
+ ****** Running generation 21 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.44821 stdev: 1.09772
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 4 with 2 members is stagnated: removing it
+
+Species 19 with 2 members is stagnated: removing it
+
+Species 30 with 2 members is stagnated: removing it
+
+Species 2 with 2 members is stagnated: removing it
+
+Species 24 with 2 members is stagnated: removing it
+
+Species 7 with 2 members is stagnated: removing it
+
+Species 14 with 2 members is stagnated: removing it
+
+Species 27 with 2 members is stagnated: removing it
+Average adjusted fitness: 0.279
+Mean genetic distance 3.474, standard deviation 0.741
+Population of 40 members in 20 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   21     2      3.5    0.234    13
+     3   21     2      3.3    0.106    17
+     5   21     2      3.4    0.223     9
+     6   21     2      5.3    0.319    17
+    10   21     2      3.4    0.223     7
+    11   21     2      7.0    0.862    20
+    12   21     2      3.6    0.245    19
+    13   21     2      3.7    0.255    19
+    15   21     2      2.5    0.021    15
+    16   21     2      3.4    0.223    16
+    17   21     2      6.0    0.394    17
+    18   21     2      3.5    0.234    14
+    20   21     2      3.4    0.223    15
+    21   21     2      2.6    0.032    16
+    22   21     2      3.4    0.223    12
+    23   21     2      3.6    0.245    18
+    25   21     2      3.4    0.117    19
+    26   21     2      5.4    0.649    17
+    28   21     2      5.3    0.628    17
+    29   21     2      3.5    0.128    19
+Total extinctions: 0
+Generation time: 0.476 sec (0.522 average)
+
+ ****** Running generation 22 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.60000 stdev: 1.14061
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 29 with 2 members is stagnated: removing it
+
+Species 25 with 2 members is stagnated: removing it
+
+Species 13 with 2 members is stagnated: removing it
+
+Species 12 with 2 members is stagnated: removing it
+Average adjusted fitness: 0.303
+Mean genetic distance 3.444, standard deviation 0.826
+Population of 33 members in 16 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   22     2      3.4    0.223    14
+     3   22     2      3.3    0.106    18
+     5   22     2      3.5    0.234    10
+     6   22     2      5.3    0.319    18
+    10   22     2      3.5    0.234     8
+    11   22     3      7.0    0.862    21
+    15   22     2      2.4    0.011    16
+    16   22     2      3.4    0.223    17
+    17   22     2      6.0    0.394    18
+    18   22     2      3.7    0.255    15
+    20   22     2      3.4    0.223    16
+    21   22     2      2.5    0.021    17
+    22   22     2      3.6    0.245    13
+    23   22     2      3.4    0.223    19
+    26   22     2      5.4    0.649    18
+    28   22     2      5.3    0.628    18
+Total extinctions: 0
+Generation time: 0.355 sec (0.503 average)
+
+ ****** Running generation 23 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.77273 stdev: 1.23344
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 23 with 2 members is stagnated: removing it
+Average adjusted fitness: 0.302
+Mean genetic distance 3.440, standard deviation 0.851
+Population of 31 members in 15 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   23     2      3.4    0.223    15
+     3   23     2      3.3    0.106    19
+     5   23     2      3.5    0.234    11
+     6   23     2      5.3    0.319    19
+    10   23     2      3.4    0.223     9
+    11   23     3      7.0    0.787    22
+    15   23     2      2.4    0.011    17
+    16   23     2      3.4    0.223    18
+    17   23     2      6.0    0.394    19
+    18   23     2      3.7    0.255    16
+    20   23     2      3.5    0.234    17
+    21   23     2      2.5    0.021    18
+    22   23     2      3.4    0.223    14
+    26   23     2      5.4    0.649    19
+    28   23     2      5.3    0.628    19
+Total extinctions: 0
+Generation time: 0.310 sec (0.480 average)
+
+ ****** Running generation 24 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.69355 stdev: 1.26515
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 3 with 2 members is stagnated: removing it
+
+Species 6 with 2 members is stagnated: removing it
+
+Species 28 with 2 members is stagnated: removing it
+
+Species 26 with 2 members is stagnated: removing it
+Average adjusted fitness: 0.237
+Mean genetic distance 3.360, standard deviation 0.942
+Population of 33 members in 11 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   24     3      3.5    0.234    16
+     5   24     3      3.5    0.234    12
+    10   24     3      3.4    0.223    10
+    11   24     5      7.0    0.574    23
+    15   24     2      2.4    0.011    18
+    16   24     3      3.4    0.223    19
+    17   24     3      6.0    0.394    20
+    18   24     3      3.4    0.223    17
+    20   24     3      3.4    0.223    18
+    21   24     2      2.5    0.021    19
+    22   24     3      3.6    0.245    15
+Total extinctions: 0
+Generation time: 0.285 sec (0.456 average)
+
+ ****** Running generation 25 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.51515 stdev: 1.13006
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 21 with 2 members is stagnated: removing it
+
+Species 16 with 3 members is stagnated: removing it
+Average adjusted fitness: 0.252
+Mean genetic distance 3.264, standard deviation 0.985
+Population of 32 members in 9 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   25     2      3.4    0.220    17
+     5   25     2      3.7    0.170    13
+    10   25     4      3.5    0.234    11
+    11   25     6      7.0    0.515    24
+    15   25     2      2.4    0.011    19
+    17   25     4      6.0    0.270    21
+    18   25     4      3.5    0.234    18
+    20   25     4      3.6    0.234    19
+    22   25     4      5.6    0.383     0
+Total extinctions: 0
+Generation time: 0.283 sec (0.431 average)
+
+ ****** Running generation 26 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.68437 stdev: 1.28916
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 15 with 2 members is stagnated: removing it
+
+Species 20 with 4 members is stagnated: removing it
+Average adjusted fitness: 0.292
+Mean genetic distance 3.059, standard deviation 1.066
+Population of 29 members in 7 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   26     3      3.4    0.223    18
+     5   26     3      3.4    0.223    14
+    10   26     3      3.5    0.170    12
+    11   26     8      7.0    0.599    25
+    17   26     3      6.0    0.202    22
+    18   26     3      3.6    0.234    19
+    22   26     6      5.6    0.394     1
+Total extinctions: 0
+Generation time: 0.289 sec (0.407 average)
+
+ ****** Running generation 27 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+
+All birds are dead. End of generation.
+
+Population's average fitness: 3.79655 stdev: 1.36369
+Best fitness: 7.00000 - size: (5, 18) - species 11 - id 48
+
+Species 18 with 3 members is stagnated: removing it
+
+Species 17 with 3 members is stagnated: removing it
+Average adjusted fitness: 0.299
+Mean genetic distance 2.907, standard deviation 1.080
+Population of 29 members in 5 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     1   27     4      3.4    0.220    19
+     5   27     4      3.5    0.234    15
+    10   27     4      3.6    0.234    13
+    11   27     7      7.0    0.239    26
+    22   27    10      6.6    0.567     0
+Total extinctions: 0
+Generation time: 0.272 sec (0.382 average)
+
+ ****** Running generation 28 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 3
+
+All birds are dead. End of generation.
+
+Population's average fitness: 5.60690 stdev: 8.46131
+Best fitness: 49.70000 - size: (5, 16) - species 22 - id 113
+
+Species 1 with 4 members is stagnated: removing it
+Average adjusted fitness: 0.058
+Mean genetic distance 2.843, standard deviation 1.010
+Population of 29 members in 4 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     5   28     3      3.6    0.023    16
+    10   28     3      3.5    0.023    14
+    11   28     7      7.1    0.042    27
+    22   28    16     49.7    0.145     0
+Total extinctions: 0
+Generation time: 0.397 sec (0.370 average)
+
+ ****** Running generation 29 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 3
+Collision of the last bird, score: 4
+
+All birds are dead. End of generation.
+
+Population's average fitness: 10.35862 stdev: 14.50559
+Best fitness: 64.10000 - size: (5, 16) - species 22 - id 113
+Average adjusted fitness: 0.078
+Mean genetic distance 2.664, standard deviation 1.110
+Population of 30 members in 4 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     5   29     2      3.5    0.018    17
+    10   29     2      3.4    0.017    15
+    11   29     8     22.0    0.082    28
+    22   29    18     64.1    0.194     0
+Total extinctions: 0
+Generation time: 0.702 sec (0.388 average)
+
+ ****** Running generation 30 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 1
+Collision of the last bird, score: 8
+
+All birds are dead. End of generation.
+
+Population's average fitness: 13.28000 stdev: 25.02411
+Best fitness: 124.40000 - size: (6, 15) - species 22 - id 152
+Average adjusted fitness: 0.046
+Mean genetic distance 2.688, standard deviation 1.066
+Population of 30 members in 4 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     5   30     2      3.5    0.009    18
+    10   30     2      3.4    0.009    16
+    11   30     7     22.0    0.036    29
+    22   30    19    124.4    0.132     0
+Total extinctions: 0
+Generation time: 0.920 sec (0.429 average)
+
+ ****** Running generation 31 ****** 
+
+Collision of the last bird, score: 15
+
+All birds are dead. End of generation.
+
+Population's average fitness: 19.54333 stdev: 44.89521
+Best fitness: 224.60000 - size: (6, 15) - species 22 - id 182
+Average adjusted fitness: 0.037
+Mean genetic distance 2.750, standard deviation 1.169
+Population of 30 members in 4 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+     5   31     2      3.5    0.005    19
+    10   31     2      3.4    0.005    17
+    11   31     6     22.0    0.025    30
+    22   31    20    224.6    0.112     0
+Total extinctions: 0
+Generation time: 1.315 sec (0.513 average)
+
+ ****** Running generation 32 ****** 
+
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+
+All birds are dead. End of generation.
+
+Population's average fitness: 50.34000 stdev: 96.36655
+Best fitness: 443.80000 - size: (6, 16) - species 22 - id 196
+
+Species 5 with 2 members is stagnated: removing it
+Average adjusted fitness: 0.059
+Mean genetic distance 2.235, standard deviation 1.275
+Population of 30 members in 3 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    10   32     2      3.4    0.002    18
+    11   32     5     22.0    0.018    31
+    22   32    23    443.8    0.157     0
+Total extinctions: 0
+Generation time: 3.385 sec (0.816 average)
+
+ ****** Running generation 33 ****** 
+
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+
+All birds are dead. End of generation.
+
+Population's average fitness: 54.00667 stdev: 118.05155
+Best fitness: 443.90000 - size: (6, 13) - species 22 - id 214
+Average adjusted fitness: 0.056
+Mean genetic distance 2.335, standard deviation 1.162
+Population of 30 members in 3 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    10   33     2      3.4    0.002    19
+    11   33     4     22.0    0.016    32
+    22   33    24    443.9    0.149     0
+Total extinctions: 0
+Generation time: 3.630 sec (1.148 average)
+
+ ****** Running generation 34 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 4
+Collision of the last bird, score: 4
+Collision of the last bird, score: 30
+
+All birds are dead. End of generation.
+
+Population's average fitness: 41.48333 stdev: 108.97838
+Best fitness: 443.90000 - size: (6, 16) - species 22 - id 196
+
+Species 10 with 2 members is stagnated: removing it
+Average adjusted fitness: 0.064
+Mean genetic distance 1.998, standard deviation 1.199
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   34     5     22.0    0.021    33
+    22   34    25    443.9    0.107     1
+Total extinctions: 0
+Generation time: 2.796 sec (1.399 average)
+
+ ****** Running generation 35 ****** 
+
+Generating difficult section (seen at score: 30)
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 3
+Collision of the last bird, score: 5
+Collision of the last bird, score: 6
+
+All birds are dead. End of generation.
+
+Population's average fitness: 11.83000 stdev: 22.23526
+Best fitness: 95.20000 - size: (5, 18) - species 11 - id 187
+Average adjusted fitness: 0.147
+Mean genetic distance 2.258, standard deviation 1.205
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   35    13     95.2    0.214     0
+    22   35    17     79.8    0.080     2
+Total extinctions: 0
+Generation time: 0.868 sec (1.458 average)
+
+ ****** Running generation 36 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 4
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+
+All birds are dead. End of generation.
+
+Population's average fitness: 31.43000 stdev: 87.08169
+Best fitness: 443.60000 - size: (6, 13) - species 22 - id 283
+Average adjusted fitness: 0.061
+Mean genetic distance 2.260, standard deviation 1.249
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   36     9     64.9    0.020     1
+    22   36    21    443.6    0.101     3
+Total extinctions: 0
+Generation time: 2.117 sec (1.640 average)
+
+ ****** Running generation 37 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 6
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+
+All birds are dead. End of generation.
+
+Population's average fitness: 37.15000 stdev: 87.50881
+Best fitness: 443.60000 - size: (6, 13) - species 22 - id 283
+Average adjusted fitness: 0.064
+Mean genetic distance 2.363, standard deviation 1.167
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   37     8     64.9    0.027     2
+    22   37    22    443.6    0.101     4
+Total extinctions: 0
+Generation time: 2.536 sec (1.867 average)
+
+ ****** Running generation 38 ****** 
+
+Collision of the last bird, score: 3
+Collision of the last bird, score: 8
+Collision of the last bird, score: 48
+
+All birds are dead. End of generation.
+
+Population's average fitness: 74.20000 stdev: 163.85752
+Best fitness: 706.40000 - size: (6, 13) - species 22 - id 352
+Average adjusted fitness: 0.079
+Mean genetic distance 2.481, standard deviation 1.055
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   38     7     64.9    0.029     3
+    22   38    23    706.4    0.129     0
+Total extinctions: 0
+Generation time: 5.024 sec (2.329 average)
+
+ ****** Running generation 39 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 36
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 101.67667 stdev: 247.48227
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.066
+Mean genetic distance 2.394, standard deviation 0.921
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   39     5     64.9    0.017     4
+    22   39    25   1074.1    0.116     0
+Total extinctions: 0
+Generation time: 6.830 sec (2.942 average)
+
+ ****** Running generation 40 ****** 
+
+Collision of the last bird, score: 44
+Collision of the last bird, score: 48
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 127.81000 stdev: 262.97071
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.118
+Mean genetic distance 2.293, standard deviation 1.092
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   40    10    516.3    0.120     0
+    22   40    20   1074.1    0.117     1
+Total extinctions: 0
+Generation time: 8.567 sec (3.707 average)
+
+ ****** Running generation 41 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 136
+
+All birds are dead. End of generation.
+
+Population's average fitness: 155.86667 stdev: 415.95206
+Best fitness: 1993.50000 - size: (6, 10) - species 22 - id 434
+Average adjusted fitness: 0.065
+Mean genetic distance 2.204, standard deviation 1.179
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   41     8    516.3    0.029     1
+    22   41    22   1993.5    0.101     0
+Total extinctions: 0
+Generation time: 10.493 sec (4.625 average)
+
+ ****** Running generation 42 ****** 
+
+Collision of the last bird, score: 85
+Collision of the last bird, score: 109
+Collision of the last bird, score: 170
+
+All birds are dead. End of generation.
+
+Population's average fitness: 310.26000 stdev: 586.39714
+Best fitness: 2490.00000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.094
+Mean genetic distance 2.160, standard deviation 1.226
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   42     6    516.3    0.029     2
+    22   42    24   2490.0    0.158     0
+Total extinctions: 0
+Generation time: 20.855 sec (6.372 average)
+
+ ****** Running generation 43 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 4
+Collision of the last bird, score: 8
+Collision of the last bird, score: 11
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+Collision of the last bird, score: 73
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 141.44000 stdev: 279.03633
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.120
+Mean genetic distance 2.321, standard deviation 1.238
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   43     9    516.3    0.104     3
+    22   43    21   1074.1    0.136     1
+Total extinctions: 0
+Generation time: 9.460 sec (6.955 average)
+
+ ****** Running generation 44 ****** 
+
+Collision of the last bird, score: 8
+Collision of the last bird, score: 36
+Collision of the last bird, score: 73
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 136.71667 stdev: 290.34925
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.109
+Mean genetic distance 2.011, standard deviation 1.303
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   44    10    516.3    0.069     4
+    22   44    20   1074.1    0.150     2
+Total extinctions: 0
+Generation time: 9.178 sec (7.593 average)
+
+ ****** Running generation 45 ****** 
+
+Collision of the last bird, score: 44
+Collision of the last bird, score: 73
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 135.02333 stdev: 291.35847
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.108
+Mean genetic distance 2.014, standard deviation 1.298
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   45     9    516.3    0.060     5
+    22   45    21   1074.1    0.156     3
+Total extinctions: 0
+Generation time: 9.157 sec (8.422 average)
+
+ ****** Running generation 46 ****** 
+
+Generating difficult section (seen at score: 73)
+
+Collision of the last bird, score: 36
+Collision of the last bird, score: 97
+
+All birds are dead. End of generation.
+
+Population's average fitness: 121.95000 stdev: 312.01964
+Best fitness: 1424.20000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.081
+Mean genetic distance 2.028, standard deviation 1.310
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   46    11    869.3    0.073     0
+    22   46    19   1424.2    0.089     4
+Total extinctions: 0
+Generation time: 8.205 sec (9.030 average)
+
+ ****** Running generation 47 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 4
+Collision of the last bird, score: 8
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 66.39000 stdev: 209.44560
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.059
+Mean genetic distance 2.026, standard deviation 1.284
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   47    13    516.3    0.055     1
+    22   47    17   1074.1    0.062     5
+Total extinctions: 0
+Generation time: 4.503 sec (9.227 average)
+
+ ****** Running generation 48 ****** 
+
+Collision of the last bird, score: 8
+Collision of the last bird, score: 19
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 134.32667 stdev: 251.71895
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.127
+Mean genetic distance 2.092, standard deviation 1.172
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   48    16    707.0    0.158     2
+    22   48    14   1074.1    0.097     6
+Total extinctions: 0
+Generation time: 9.020 sec (9.627 average)
+
+ ****** Running generation 49 ****** 
+
+Collision of the last bird, score: 8
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 122.33000 stdev: 247.38287
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.114
+Mean genetic distance 2.065, standard deviation 1.123
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   49    13    707.0    0.080     3
+    22   49    17   1074.1    0.148     7
+Total extinctions: 0
+Generation time: 8.216 sec (9.765 average)
+
+ ****** Running generation 50 ****** 
+
+Generating difficult section (seen at score: 73)
+
+Collision of the last bird, score: 1
+Collision of the last bird, score: 36
+Collision of the last bird, score: 42
+Collision of the last bird, score: 97
+Collision of the last bird, score: 146
+
+All birds are dead. End of generation.
+
+Population's average fitness: 241.59667 stdev: 483.34036
+Best fitness: 2139.20000 - size: (8, 21) - species 11 - id 605
+Average adjusted fitness: 0.114
+Mean genetic distance 2.056, standard deviation 1.213
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   50    15   2139.2    0.130     0
+    22   50    15   1424.2    0.098     8
+Total extinctions: 0
+Generation time: 16.299 sec (10.539 average)
+
+ ****** Running generation 51 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 2
+Collision of the last bird, score: 4
+Collision of the last bird, score: 30
+Collision of the last bird, score: 35
+Collision of the last bird, score: 48
+Collision of the last bird, score: 73
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 169.56667 stdev: 311.15780
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.156
+Mean genetic distance 2.028, standard deviation 1.269
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   51    13    707.0    0.111     1
+    22   51    17   1074.1    0.201     9
+Total extinctions: 0
+Generation time: 11.506 sec (10.640 average)
+
+ ****** Running generation 52 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 44
+Collision of the last bird, score: 59
+Collision of the last bird, score: 73
+Collision of the last bird, score: 73
+
+All birds are dead. End of generation.
+
+Population's average fitness: 193.40667 stdev: 334.52268
+Best fitness: 1074.10000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.169
+Mean genetic distance 2.061, standard deviation 1.237
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   52    11    707.0    0.098     2
+    22   52    19   1074.1    0.240    10
+Total extinctions: 0
+Generation time: 13.051 sec (9.859 average)
+
+ ****** Running generation 53 ****** 
+
+Collision of the last bird, score: 36
+Collision of the last bird, score: 73
+Collision of the last bird, score: 73
+Collision of the last bird, score: 78
+
+All birds are dead. End of generation.
+
+Population's average fitness: 197.93000 stdev: 353.56562
+Best fitness: 1144.90000 - size: (7, 19) - species 11 - id 726
+Average adjusted fitness: 0.175
+Mean genetic distance 2.090, standard deviation 1.278
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   53    14   1144.9    0.190     3
+    22   53    16   1074.1    0.161    11
+Total extinctions: 0
+Generation time: 13.318 sec (10.245 average)
+
+ ****** Running generation 54 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 48
+Collision of the last bird, score: 78
+
+All birds are dead. End of generation.
+
+Population's average fitness: 147.94000 stdev: 341.10575
+Best fitness: 1144.90000 - size: (7, 19) - species 11 - id 726
+Average adjusted fitness: 0.127
+Mean genetic distance 2.101, standard deviation 1.265
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   54    15   1144.9    0.121     4
+    22   54    15   1074.1    0.133    12
+Total extinctions: 0
+Generation time: 9.944 sec (10.322 average)
+
+ ****** Running generation 55 ****** 
+
+Collision of the last bird, score: 35
+Collision of the last bird, score: 39
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 249.58667 stdev: 471.17032
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.128
+Mean genetic distance 2.035, standard deviation 1.277
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   55    17   1935.2    0.168     5
+    22   55    13   1074.1    0.088    13
+Total extinctions: 0
+Generation time: 16.796 sec (11.086 average)
+
+ ****** Running generation 56 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 35
+Collision of the last bird, score: 73
+Collision of the last bird, score: 78
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 272.23000 stdev: 486.74730
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.136
+Mean genetic distance 2.114, standard deviation 1.344
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   56    18   1935.2    0.160     6
+    22   56    12   1074.1    0.112    14
+Total extinctions: 0
+Generation time: 18.318 sec (12.097 average)
+
+ ****** Running generation 57 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 4
+Collision of the last bird, score: 78
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 187.62333 stdev: 459.43898
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.096
+Mean genetic distance 2.074, standard deviation 1.345
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   57    16   1935.2    0.094     7
+    22   57    14   1074.1    0.099    15
+Total extinctions: 0
+Generation time: 12.716 sec (12.918 average)
+
+ ****** Running generation 58 ****** 
+
+Generating difficult section (seen at score: 132)
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 40
+
+All birds are dead. End of generation.
+
+Population's average fitness: 70.10667 stdev: 159.39802
+Best fitness: 592.10000 - size: (7, 19) - species 11 - id 726
+Average adjusted fitness: 0.118
+Mean genetic distance 2.144, standard deviation 1.282
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   58    13    592.1    0.079     8
+    22   58    17    591.6    0.156    16
+Total extinctions: 0
+Generation time: 4.759 sec (12.492 average)
+
+ ****** Running generation 59 ****** 
+
+Collision of the last bird, score: 2
+Collision of the last bird, score: 4
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 221.27333 stdev: 461.13159
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.115
+Mean genetic distance 2.086, standard deviation 1.358
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   59    15   1935.2    0.128     9
+    22   59    15   1074.1    0.102    17
+Total extinctions: 0
+Generation time: 14.919 sec (13.163 average)
+
+ ****** Running generation 60 ****** 
+
+Collision of the last bird, score: 2
+Collision of the last bird, score: 4
+Collision of the last bird, score: 78
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 203.25667 stdev: 456.10458
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.104
+Mean genetic distance 2.041, standard deviation 1.304
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   60    16   1935.2    0.116    10
+    22   60    14   1074.1    0.092    18
+Total extinctions: 0
+Generation time: 13.717 sec (12.904 average)
+
+ ****** Running generation 61 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 4
+Collision of the last bird, score: 78
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 242.42667 stdev: 523.35730
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.126
+Mean genetic distance 2.005, standard deviation 1.345
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   61    14   1935.2    0.104    11
+    22   61    16   1599.3    0.147    19
+Total extinctions: 0
+Generation time: 16.318 sec (13.386 average)
+
+ ****** Running generation 62 ****** 
+
+Generating difficult section (seen at score: 132)
+
+Collision of the last bird, score: 1
+Collision of the last bird, score: 1
+Collision of the last bird, score: 40
+
+All birds are dead. End of generation.
+
+Population's average fitness: 69.17000 stdev: 158.92945
+Best fitness: 592.10000 - size: (7, 19) - species 11 - id 726
+Average adjusted fitness: 0.112
+Mean genetic distance 2.057, standard deviation 1.330
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   62    13    592.1    0.096    12
+    22   62    17    591.9    0.129    20
+Total extinctions: 0
+Generation time: 4.710 sec (12.551 average)
+
+ ****** Running generation 63 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 250.25333 stdev: 507.04751
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.128
+Mean genetic distance 2.067, standard deviation 1.367
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   63    14   1935.2    0.123    13
+    22   63    16   1599.3    0.132    21
+Total extinctions: 0
+Generation time: 16.858 sec (12.906 average)
+
+ ****** Running generation 64 ****** 
+
+Collision of the last bird, score: 15
+Collision of the last bird, score: 78
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 225.21667 stdev: 501.48089
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.116
+Mean genetic distance 2.064, standard deviation 1.328
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   64    15   1935.2    0.123    14
+    22   64    15   1599.3    0.109    22
+Total extinctions: 0
+Generation time: 15.221 sec (13.433 average)
+
+ ****** Running generation 65 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 78
+Collision of the last bird, score: 132
+
+All birds are dead. End of generation.
+
+Population's average fitness: 214.94333 stdev: 498.53895
+Best fitness: 1935.20000 - size: (7, 20) - species 11 - id 793
+Average adjusted fitness: 0.110
+Mean genetic distance 2.043, standard deviation 1.299
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   65    16   1935.2    0.113    15
+    22   65    14   1599.3    0.107    23
+Total extinctions: 0
+Generation time: 14.579 sec (13.212 average)
+
+ ****** Running generation 66 ****** 
+
+Generating difficult section (seen at score: 132)
+
+Collision of the last bird, score: 32
+Collision of the last bird, score: 40
+
+All birds are dead. End of generation.
+
+Population's average fitness: 85.63000 stdev: 173.91929
+Best fitness: 592.10000 - size: (7, 19) - species 11 - id 726
+Average adjusted fitness: 0.142
+Mean genetic distance 2.074, standard deviation 1.305
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   66    15    592.1    0.130    16
+    22   66    15    591.9    0.155    24
+Total extinctions: 0
+Generation time: 5.794 sec (11.959 average)
+
+ ****** Running generation 67 ****** 
+
+Collision of the last bird, score: 15
+Collision of the last bird, score: 78
+Collision of the last bird, score: 109
+
+All birds are dead. End of generation.
+
+Population's average fitness: 168.59000 stdev: 393.98232
+Best fitness: 1599.30000 - size: (6, 13) - species 22 - id 940
+Average adjusted fitness: 0.104
+Mean genetic distance 2.074, standard deviation 1.245
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   67    12   1144.9    0.063    17
+    22   67    18   1599.3    0.146    25
+Total extinctions: 0
+Generation time: 11.427 sec (11.830 average)
+
+ ****** Running generation 68 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 4
+Collision of the last bird, score: 30
+Collision of the last bird, score: 73
+Collision of the last bird, score: 109
+
+All birds are dead. End of generation.
+
+Population's average fitness: 158.80000 stdev: 388.22464
+Best fitness: 1599.30000 - size: (6, 13) - species 22 - id 940
+Average adjusted fitness: 0.094
+Mean genetic distance 2.126, standard deviation 1.252
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   68    13   1144.9    0.076    18
+    22   68    17   1599.3    0.113    26
+Total extinctions: 0
+Generation time: 10.796 sec (12.434 average)
+
+ ****** Running generation 69 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 11
+Collision of the last bird, score: 73
+Collision of the last bird, score: 109
+
+All birds are dead. End of generation.
+
+Population's average fitness: 174.53000 stdev: 387.69448
+Best fitness: 1599.30000 - size: (6, 13) - species 22 - id 940
+Average adjusted fitness: 0.108
+Mean genetic distance 2.137, standard deviation 1.310
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   69    14   1144.9    0.109    19
+    22   69    16   1599.3    0.107    27
+Total extinctions: 0
+Generation time: 11.812 sec (12.123 average)
+
+ ****** Running generation 70 ****** 
+
+Generating difficult section (seen at score: 109)
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 5
+Collision of the last bird, score: 70
+Collision of the last bird, score: 87
+
+All birds are dead. End of generation.
+
+Population's average fitness: 140.90667 stdev: 334.41542
+Best fitness: 1276.40000 - size: (7, 19) - species 11 - id 726
+Average adjusted fitness: 0.109
+Mean genetic distance 2.092, standard deviation 1.274
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   70    15   1276.4    0.119    20
+    22   70    15   1027.5    0.100    28
+Total extinctions: 0
+Generation time: 9.592 sec (11.711 average)
+
+ ****** Running generation 71 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 45
+Collision of the last bird, score: 78
+
+All birds are dead. End of generation.
+
+Population's average fitness: 154.95000 stdev: 308.65599
+Best fitness: 1144.90000 - size: (7, 19) - species 11 - id 726
+Average adjusted fitness: 0.134
+Mean genetic distance 2.114, standard deviation 1.246
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   71    14   1144.9    0.124    21
+    22   71    16   1074.1    0.143    29
+Total extinctions: 0
+Generation time: 10.521 sec (11.131 average)
+
+ ****** Running generation 72 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 30
+Collision of the last bird, score: 30
+Collision of the last bird, score: 45
+Collision of the last bird, score: 78
+Collision of the last bird, score: 84
+
+All birds are dead. End of generation.
+
+Population's average fitness: 247.30333 stdev: 392.35174
+Best fitness: 1232.40000 - size: (6, 12) - species 22 - id 1221
+Average adjusted fitness: 0.198
+Mean genetic distance 2.080, standard deviation 1.246
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   72    13   1144.9    0.177    22
+    22   72    17   1232.4    0.218    30
+Total extinctions: 0
+Generation time: 16.800 sec (12.340 average)
+
+ ****** Running generation 73 ****** 
+
+Collision of the last bird, score: 30
+Collision of the last bird, score: 170
+
+All birds are dead. End of generation.
+
+Population's average fitness: 239.18000 stdev: 514.16540
+Best fitness: 2490.00000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.092
+Mean genetic distance 2.070, standard deviation 1.248
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   73    12   1144.9    0.070    23
+    22   73    18   2490.0    0.114    31
+Total extinctions: 0
+Generation time: 16.492 sec (12.303 average)
+
+ ****** Running generation 74 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 30
+Collision of the last bird, score: 84
+
+All birds are dead. End of generation.
+
+Population's average fitness: 160.05667 stdev: 358.64975
+Best fitness: 1232.40000 - size: (6, 12) - species 22 - id 1221
+Average adjusted fitness: 0.129
+Mean genetic distance 2.103, standard deviation 1.238
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   74    14   1144.9    0.132    24
+    22   74    16   1232.4    0.126    32
+Total extinctions: 0
+Generation time: 11.337 sec (11.915 average)
+
+ ****** Running generation 75 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+Collision of the last bird, score: 170
+
+All birds are dead. End of generation.
+
+Population's average fitness: 283.84667 stdev: 575.87031
+Best fitness: 2490.00000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.113
+Mean genetic distance 2.112, standard deviation 1.195
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   75    15   1684.8    0.112    25
+    22   75    15   2490.0    0.114    33
+Total extinctions: 0
+Generation time: 19.899 sec (12.447 average)
+
+ ****** Running generation 76 ****** 
+
+Collision of the last bird, score: 8
+Collision of the last bird, score: 19
+Collision of the last bird, score: 84
+Collision of the last bird, score: 115
+
+All birds are dead. End of generation.
+
+Population's average fitness: 220.74333 stdev: 433.04961
+Best fitness: 1684.80000 - size: (7, 19) - species 11 - id 1297
+Average adjusted fitness: 0.130
+Mean genetic distance 2.120, standard deviation 1.238
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   76    16   1684.8    0.144    26
+    22   76    14   1232.4    0.116    34
+Total extinctions: 0
+Generation time: 15.589 sec (13.426 average)
+
+ ****** Running generation 77 ****** 
+
+Collision of the last bird, score: 1
+Collision of the last bird, score: 4
+Collision of the last bird, score: 8
+Collision of the last bird, score: 30
+Collision of the last bird, score: 73
+Collision of the last bird, score: 78
+Collision of the last bird, score: 115
+Collision of the last bird, score: 170
+
+All birds are dead. End of generation.
+
+Population's average fitness: 289.09000 stdev: 589.58620
+Best fitness: 2490.00000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.115
+Mean genetic distance 2.124, standard deviation 1.227
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   77    15   1684.8    0.122    27
+    22   77    15   2490.0    0.108    35
+Total extinctions: 0
+Generation time: 20.355 sec (14.319 average)
+
+ ****** Running generation 78 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 0
+Collision of the last bird, score: 2
+Collision of the last bird, score: 4
+Collision of the last bird, score: 4
+Collision of the last bird, score: 84
+Collision of the last bird, score: 115
+
+All birds are dead. End of generation.
+
+Population's average fitness: 195.69333 stdev: 442.78813
+Best fitness: 1684.80000 - size: (7, 19) - species 11 - id 1297
+Average adjusted fitness: 0.115
+Mean genetic distance 2.091, standard deviation 1.267
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   78    16   1684.8    0.132    28
+    22   78    14   1232.4    0.098    36
+Total extinctions: 0
+Generation time: 13.811 sec (14.621 average)
+
+ ****** Running generation 79 ****** 
+
+Collision of the last bird, score: 30
+Collision of the last bird, score: 110
+Collision of the last bird, score: 115
+Collision of the last bird, score: 170
+
+All birds are dead. End of generation.
+
+Population's average fitness: 385.92667 stdev: 655.77944
+Best fitness: 2490.00000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.156
+Mean genetic distance 2.189, standard deviation 1.161
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   79    14   1684.8    0.125    29
+    22   79    16   2490.0    0.187    37
+Total extinctions: 0
+Generation time: 27.115 sec (16.151 average)
+
+ ****** Running generation 80 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 11
+Collision of the last bird, score: 30
+Collision of the last bird, score: 109
+Collision of the last bird, score: 110
+Collision of the last bird, score: 115
+
+All birds are dead. End of generation.
+
+Population's average fitness: 269.64667 stdev: 509.04709
+Best fitness: 1684.80000 - size: (7, 19) - species 11 - id 1297
+Average adjusted fitness: 0.161
+Mean genetic distance 2.252, standard deviation 1.079
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   80    16   1684.8    0.196    30
+    22   80    14   1599.6    0.126    38
+Total extinctions: 0
+Generation time: 18.950 sec (17.087 average)
+
+ ****** Running generation 81 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 30
+Collision of the last bird, score: 30
+Collision of the last bird, score: 35
+Collision of the last bird, score: 110
+Collision of the last bird, score: 115
+
+All birds are dead. End of generation.
+
+Population's average fitness: 292.72000 stdev: 500.66044
+Best fitness: 1684.80000 - size: (7, 19) - species 11 - id 1297
+Average adjusted fitness: 0.172
+Mean genetic distance 2.113, standard deviation 1.133
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   81    17   1684.8    0.185    31
+    22   81    13   1599.6    0.158    39
+Total extinctions: 0
+Generation time: 20.060 sec (18.041 average)
+
+ ****** Running generation 82 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 11
+Collision of the last bird, score: 32
+Collision of the last bird, score: 110
+Collision of the last bird, score: 115
+
+All birds are dead. End of generation.
+
+Population's average fitness: 262.56333 stdev: 508.10266
+Best fitness: 1684.80000 - size: (7, 19) - species 11 - id 1297
+Average adjusted fitness: 0.154
+Mean genetic distance 2.048, standard deviation 1.207
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   82    16   1684.8    0.158    32
+    22   82    14   1599.6    0.150    40
+Total extinctions: 0
+Generation time: 17.456 sec (18.106 average)
+
+ ****** Running generation 83 ****** 
+
+Generating difficult section (seen at score: 115)
+
+Collision of the last bird, score: 12
+Collision of the last bird, score: 26
+Collision of the last bird, score: 62
+Collision of the last bird, score: 87
+
+All birds are dead. End of generation.
+
+Population's average fitness: 182.53000 stdev: 325.57843
+Best fitness: 1276.00000 - size: (7, 20) - species 11 - id 1423
+Average adjusted fitness: 0.140
+Mean genetic distance 2.083, standard deviation 1.273
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   83    17   1276.0    0.166    33
+    22   83    13   1029.9    0.114    41
+Total extinctions: 0
+Generation time: 12.184 sec (17.676 average)
+
+ ****** Running generation 84 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 8
+Collision of the last bird, score: 15
+Collision of the last bird, score: 78
+Collision of the last bird, score: 110
+
+All birds are dead. End of generation.
+
+Population's average fitness: 208.99000 stdev: 462.61350
+Best fitness: 1613.50000 - size: (7, 20) - species 11 - id 1423
+Average adjusted fitness: 0.130
+Mean genetic distance 2.111, standard deviation 1.248
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   84    15   1613.5    0.118    34
+    22   84    15   1599.6    0.142    42
+Total extinctions: 0
+Generation time: 13.984 sec (17.940 average)
+
+ ****** Running generation 85 ****** 
+
+Collision of the last bird, score: 2
+Collision of the last bird, score: 36
+Collision of the last bird, score: 78
+Collision of the last bird, score: 110
+
+All birds are dead. End of generation.
+
+Population's average fitness: 273.57000 stdev: 472.15185
+Best fitness: 1613.50000 - size: (7, 20) - species 11 - id 1423
+Average adjusted fitness: 0.168
+Mean genetic distance 2.114, standard deviation 1.265
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   85    16   1613.5    0.179    35
+    22   85    14   1599.6    0.158    43
+Total extinctions: 0
+Generation time: 18.146 sec (17.765 average)
+
+ ****** Running generation 86 ****** 
+
+Collision of the last bird, score: 15
+Collision of the last bird, score: 44
+Collision of the last bird, score: 78
+Collision of the last bird, score: 110
+
+All birds are dead. End of generation.
+
+Population's average fitness: 246.56333 stdev: 467.20826
+Best fitness: 1613.50000 - size: (7, 20) - species 11 - id 1423
+Average adjusted fitness: 0.150
+Mean genetic distance 2.175, standard deviation 1.215
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   86    17   1613.5    0.172    36
+    22   86    13   1599.6    0.129    44
+Total extinctions: 0
+Generation time: 16.345 sec (17.841 average)
+
+ ****** Running generation 87 ****** 
+
+Generating difficult section (seen at score: 110)
+
+Collision of the last bird, score: 2
+Collision of the last bird, score: 4
+Collision of the last bird, score: 54
+Collision of the last bird, score: 67
+
+All birds are dead. End of generation.
+
+Population's average fitness: 129.03333 stdev: 257.22829
+Best fitness: 983.80000 - size: (6, 15) - species 11 - id 1521
+Average adjusted fitness: 0.120
+Mean genetic distance 2.187, standard deviation 1.106
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   87    20    983.8    0.185    37
+    22   87    10    387.5    0.055    45
+Total extinctions: 0
+Generation time: 8.575 sec (16.663 average)
+
+ ****** Running generation 88 ****** 
+
+Collision of the last bird, score: 1
+Collision of the last bird, score: 30
+Collision of the last bird, score: 78
+Collision of the last bird, score: 109
+
+All birds are dead. End of generation.
+
+Population's average fitness: 224.31667 stdev: 414.25164
+Best fitness: 1599.60000 - size: (6, 12) - species 22 - id 1404
+Average adjusted fitness: 0.172
+Mean genetic distance 2.340, standard deviation 1.208
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   88    13   1144.7    0.073    38
+    22   88    17   1599.6    0.271    46
+Total extinctions: 0
+Generation time: 14.926 sec (16.774 average)
+
+ ****** Running generation 89 ****** 
+
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+Collision of the last bird, score: 73
+Collision of the last bird, score: 109
+
+All birds are dead. End of generation.
+
+Population's average fitness: 253.74667 stdev: 419.15540
+Best fitness: 1599.60000 - size: (6, 12) - species 22 - id 1404
+Average adjusted fitness: 0.161
+Mean genetic distance 2.174, standard deviation 1.407
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   89    15   1144.7    0.188    39
+    22   89    15   1599.6    0.134    47
+Total extinctions: 0
+Generation time: 16.789 sec (15.741 average)
+
+ ****** Running generation 90 ****** 
+
+Collision of the last bird, score: 1
+Collision of the last bird, score: 8
+Collision of the last bird, score: 15
+Collision of the last bird, score: 73
+Collision of the last bird, score: 109
+
+All birds are dead. End of generation.
+
+Population's average fitness: 223.79000 stdev: 435.48839
+Best fitness: 1599.60000 - size: (6, 12) - species 22 - id 1404
+Average adjusted fitness: 0.139
+Mean genetic distance 2.160, standard deviation 1.445
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   90    16   1144.7    0.147    40
+    22   90    14   1599.6    0.130    48
+Total extinctions: 0
+Generation time: 14.797 sec (15.326 average)
+
+ ****** Running generation 91 ****** 
+
+Generating difficult section (seen at score: 109)
+
+Collision of the last bird, score: 2
+Collision of the last bird, score: 2
+Collision of the last bird, score: 3
+Collision of the last bird, score: 61
+
+All birds are dead. End of generation.
+
+Population's average fitness: 103.25000 stdev: 212.43841
+Best fitness: 898.60000 - size: (6, 13) - species 22 - id 368
+Average adjusted fitness: 0.111
+Mean genetic distance 2.176, standard deviation 1.425
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   91    17    721.3    0.137    41
+    22   91    13    898.6    0.085    49
+Total extinctions: 0
+Generation time: 6.888 sec (14.009 average)
+
+ ****** Running generation 92 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 11
+Collision of the last bird, score: 30
+Collision of the last bird, score: 73
+Collision of the last bird, score: 78
+Collision of the last bird, score: 127
+
+All birds are dead. End of generation.
+
+Population's average fitness: 244.79000 stdev: 446.75935
+Best fitness: 1859.70000 - size: (6, 14) - species 11 - id 1726
+Average adjusted fitness: 0.124
+Mean genetic distance 2.214, standard deviation 1.377
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   92    19   1859.7    0.175    42
+    22   92    11   1074.1    0.073    50
+Total extinctions: 0
+Generation time: 16.223 sec (13.886 average)
+
+ ****** Running generation 93 ****** 
+
+Collision of the last bird, score: 30
+Collision of the last bird, score: 78
+Collision of the last bird, score: 127
+
+All birds are dead. End of generation.
+
+Population's average fitness: 187.51333 stdev: 421.92129
+Best fitness: 1859.70000 - size: (6, 14) - species 11 - id 1726
+Average adjusted fitness: 0.099
+Mean genetic distance 2.219, standard deviation 1.402
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   93    17   1859.7    0.101    43
+    22   93    13   1074.1    0.097    51
+Total extinctions: 0
+Generation time: 12.381 sec (13.905 average)
+
+ ****** Running generation 94 ****** 
+
+Collision of the last bird, score: 48
+Collision of the last bird, score: 78
+Collision of the last bird, score: 127
+
+All birds are dead. End of generation.
+
+Population's average fitness: 233.59000 stdev: 433.62868
+Best fitness: 1859.70000 - size: (6, 14) - species 11 - id 1726
+Average adjusted fitness: 0.119
+Mean genetic distance 2.230, standard deviation 1.395
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   94    19   1859.7    0.160    44
+    22   94    11   1074.1    0.078    52
+Total extinctions: 0
+Generation time: 15.504 sec (14.057 average)
+
+ ****** Running generation 95 ****** 
+
+Generating difficult section (seen at score: 127)
+
+Collision of the last bird, score: 20
+Collision of the last bird, score: 20
+Collision of the last bird, score: 50
+Collision of the last bird, score: 117
+
+All birds are dead. End of generation.
+
+Population's average fitness: 181.35000 stdev: 341.72199
+Best fitness: 1713.70000 - size: (6, 14) - species 11 - id 1726
+Average adjusted fitness: 0.095
+Mean genetic distance 2.232, standard deviation 1.434
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   95    20   1713.7    0.130    45
+    22   95    10    735.6    0.060    53
+Total extinctions: 0
+Generation time: 12.076 sec (13.450 average)
+
+ ****** Running generation 96 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 15
+Collision of the last bird, score: 39
+Collision of the last bird, score: 78
+Collision of the last bird, score: 127
+
+All birds are dead. End of generation.
+
+Population's average fitness: 197.17000 stdev: 424.37249
+Best fitness: 1859.70000 - size: (6, 14) - species 11 - id 1726
+Average adjusted fitness: 0.102
+Mean genetic distance 2.220, standard deviation 1.453
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   96    18   1859.7    0.110    46
+    22   96    12   1074.1    0.094    54
+Total extinctions: 0
+Generation time: 13.098 sec (13.126 average)
+
+ ****** Running generation 97 ****** 
+
+Collision of the last bird, score: 30
+Collision of the last bird, score: 41
+Collision of the last bird, score: 78
+Collision of the last bird, score: 127
+
+All birds are dead. End of generation.
+
+Population's average fitness: 275.88667 stdev: 451.29407
+Best fitness: 1859.70000 - size: (6, 14) - species 11 - id 1726
+Average adjusted fitness: 0.146
+Mean genetic distance 2.284, standard deviation 1.398
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   97    17   1859.7    0.151    47
+    22   97    13   1074.1    0.142    55
+Total extinctions: 0
+Generation time: 18.208 sec (14.089 average)
+
+ ****** Running generation 98 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 1
+Collision of the last bird, score: 82
+Collision of the last bird, score: 172
+
+All birds are dead. End of generation.
+
+Population's average fitness: 341.66667 stdev: 637.12553
+Best fitness: 2518.30000 - size: (6, 14) - species 11 - id 1908
+Average adjusted fitness: 0.130
+Mean genetic distance 2.228, standard deviation 1.280
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   98    18   2518.3    0.165     0
+    22   98    12   1074.1    0.095    56
+Total extinctions: 0
+Generation time: 22.603 sec (14.857 average)
+
+ ****** Running generation 99 ****** 
+
+Collision of the last bird, score: 4
+Collision of the last bird, score: 6
+Collision of the last bird, score: 15
+Collision of the last bird, score: 30
+Collision of the last bird, score: 127
+Collision of the last bird, score: 172
+
+All birds are dead. End of generation.
+
+Population's average fitness: 287.46333 stdev: 596.34652
+Best fitness: 2518.30000 - size: (6, 14) - species 11 - id 1908
+Average adjusted fitness: 0.111
+Mean genetic distance 2.253, standard deviation 1.308
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11   99    17   2518.3    0.122     1
+    22   99    13   1074.1    0.101    57
+Total extinctions: 0
+Generation time: 19.056 sec (15.083 average)
+
+ ****** Running generation 100 ****** 
+
+Collision of the last bird, score: 0
+Collision of the last bird, score: 1
+Collision of the last bird, score: 15
+Collision of the last bird, score: 15
+Collision of the last bird, score: 127
+Collision of the last bird, score: 172
+
+All birds are dead. End of generation.
+
+Population's average fitness: 303.76333 stdev: 601.19833
+Best fitness: 2518.30000 - size: (6, 14) - species 11 - id 1908
+Average adjusted fitness: 0.120
+Mean genetic distance 2.279, standard deviation 1.398
+Population of 30 members in 2 species:
+   ID   age  size  fitness  adj fit  stag
+  ====  ===  ====  =======  =======  ====
+    11  100    16   2518.3    0.122     2
+    22  100    14   1074.1    0.117    58
+Total extinctions: 0
+Generation time: 20.154 sec (15.619 average)
+
+ ****** Running generation 101 ****** 
+
+Generating difficult section (seen at score: 172)
+
+Collision of the last bird, score: 7
+Collision of the last bird, score: 8
+Collision of the last bird, score: 72
+Collision of the last bird, score: 397
+
+All birds are dead. End of generation.
+
+Population's average fitness: 293.09667 stdev: 1046.48214
+Best fitness: 5802.00000 - size: (6, 14) - species 11 - id 1908
+
+Best individual in generation 101 meets fitness threshold - complexity: (6, 14)
+Best genome: Key: 1908
+Fitness: 5802.00000000235
+Nodes:
+	0 DefaultNodeGene(key=0, bias=0.633080754337159, response=1.0, activation=tanh, aggregation=sum)
+	41 DefaultNodeGene(key=41, bias=0.007745430050207241, response=1.0, activation=tanh, aggregation=sum)
+	42 DefaultNodeGene(key=42, bias=-1.8676580930332216, response=1.0, activation=tanh, aggregation=sum)
+	44 DefaultNodeGene(key=44, bias=0.5759727984653804, response=1.0, activation=tanh, aggregation=sum)
+	171 DefaultNodeGene(key=171, bias=1.3481928437990938, response=1.0, activation=tanh, aggregation=sum)
+	192 DefaultNodeGene(key=192, bias=-0.3387026770613711, response=1.0, activation=tanh, aggregation=sum)
+Connections:
+	DefaultConnectionGene(key=(-4, 41), weight=-3.0966112380201336, enabled=True)
+	DefaultConnectionGene(key=(-4, 42), weight=-0.8205024838255177, enabled=True)
+	DefaultConnectionGene(key=(-4, 44), weight=0.9071777956762805, enabled=True)
+	DefaultConnectionGene(key=(-3, 41), weight=-1.273193977547311, enabled=True)
+	DefaultConnectionGene(key=(-3, 42), weight=3.504176589307519, enabled=True)
+	DefaultConnectionGene(key=(-3, 44), weight=-0.5231872373801483, enabled=True)
+	DefaultConnectionGene(key=(-2, 41), weight=1.717418971350351, enabled=True)
+	DefaultConnectionGene(key=(-2, 42), weight=-1.7080059432114034, enabled=True)
+	DefaultConnectionGene(key=(-2, 44), weight=-0.31541944096084706, enabled=False)
+	DefaultConnectionGene(key=(-1, 41), weight=-1.5717572824005073, enabled=False)
+	DefaultConnectionGene(key=(-1, 42), weight=-0.40636549576423847, enabled=True)
+	DefaultConnectionGene(key=(-1, 171), weight=0.15197151397812197, enabled=True)
+	DefaultConnectionGene(key=(41, 0), weight=0.1033816454810722, enabled=True)
+	DefaultConnectionGene(key=(42, 0), weight=-1.7536762598333655, enabled=True)
+	DefaultConnectionGene(key=(42, 44), weight=-1.3277830436468674, enabled=True)
+	DefaultConnectionGene(key=(44, 0), weight=0.9304360210179594, enabled=False)
+	DefaultConnectionGene(key=(171, 41), weight=0.46514234715045777, enabled=True)

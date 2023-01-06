@@ -6,7 +6,7 @@ class Config:
     def __init__(self):
         pass
 
-    def set_config(self, main_config):
+    def set_config(self, main_config, neat_config):
         run_mode = main_config["GENERAL_SETTINGS"]["run_mode"].strip('"')
 
         if run_mode != "learn" and run_mode != "run_trained" and run_mode != "play_standalone_game":
@@ -26,6 +26,8 @@ class Config:
             "LOGGING_SETTINGS"]["should_log_to_file"] == "True" else False
 
         if self.run_mode == "learn":
+            self.hidden_neuron_count = int(
+                neat_config.genome_config.num_hidden)
             self.number_of_generations = int(
                 main_config["LEARN_SETTINGS"]["number_of_generations"])
             self.training_mode = main_config["LEARN_SETTINGS"]["training_mode"].strip(
@@ -49,6 +51,8 @@ class Config:
             self.genome_name = main_config["RUN_TRAINED_SETTINGS"]["genome_name"].strip(
                 '"')
             self.genome_directory = main_config["RUN_TRAINED_SETTINGS"]["genome_directory"].strip(
+                '"')
+            self.neuron_directory = main_config["RUN_TRAINED_SETTINGS"]["neuron_directory"].strip(
                 '"')
             self.max_score = int(
                 main_config["RUN_TRAINED_SETTINGS"]["max_score"])
@@ -85,6 +89,12 @@ class Config:
     def get_genome_directory(self):
         if self.run_mode == "run_trained":
             return self.genome_directory
+
+        raise Exception("Program was not run in the \"run_trained\" mode.")
+
+    def get_neuron_directory(self):
+        if self.run_mode == "run_trained":
+            return self.neuron_directory
 
         raise Exception("Program was not run in the \"run_trained\" mode.")
 
@@ -129,8 +139,10 @@ class Config:
 
     def get_logs_path(self):
         if self.run_mode == "learn":
-            logs_relative_path = f"{GENOMES_DIR}\\{self.number_of_generations} generations\\logs\\"
+            logs_relative_path = f"{GENOMES_DIR}\\{self.hidden_neuron_count} neuron\\{self.number_of_generations} generations\\logs\\"
             logs_filename = f"{self.training_mode}_{self.number_of_generations}_generations"
+
+            # add creating directories if not exist
 
             if self.training_mode == "no_randomness" and self.should_repeat_difficult_sections:
                 logs_filename = f"{logs_filename}_with_repeats_{self.number_of_fails_before_repeating}"
@@ -146,8 +158,10 @@ class Config:
 
     def get_genome_path(self):
         if self.run_mode == "learn":
-            genome_relative_path = f"{GENOMES_DIR}\\{self.number_of_generations} generations\\"
+            genome_relative_path = f"{GENOMES_DIR}\\{self.hidden_neuron_count} neuron\\{self.number_of_generations} generations\\"
             genome_filename = f"{self.training_mode}_{self.number_of_generations}_generations"
+
+            # add creating directories if not exist
 
             if self.training_mode == "no_randomness" and self.should_repeat_difficult_sections:
                 genome_filename = f"{genome_filename}_with_repeats_{self.number_of_fails_before_repeating}"
@@ -159,8 +173,11 @@ class Config:
                 genome_pathname = f"{genome_pathname}_1"
 
             return f"{genome_pathname}.sav"
+        elif self.run_mode == "run_trained":
+            return f"{GENOMES_DIR}\\{self.neuron_directory}\\{self.genome_directory}\\{self.genome_name}.sav"
 
-        raise Exception("Program was not run in the \"learn\" mode.")
+        raise Exception(
+            "Program was not run in the \"learn\" or \"run_trained\" mode.")
 
     def get_should_log_to_console(self):
         return self.should_log_to_console
@@ -176,6 +193,9 @@ class Config:
 
     def get_increasing_fitness_step_value(self):
         return self.increasing_fitness_step_value
+
+    def get_hidden_neuron_count(self):
+        return self.hidden_neuron_count
 
 
 config = Config()
