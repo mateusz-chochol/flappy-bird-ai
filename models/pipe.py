@@ -19,9 +19,6 @@ class Pipe:
 
     def set_height(self):
         self.gap_height = custom_random.randrange(50, 450)
-        print("--------")
-        print(self.gap_height)
-        print("--------")
         self.bottom_pipe_y = self.gap_height + config.get_gap_between_pipes()
         self.top_pipe_y = self.gap_height - self.TOP_PIPE_IMG.get_height()
 
