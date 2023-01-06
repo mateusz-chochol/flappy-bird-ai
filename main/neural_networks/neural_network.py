@@ -159,6 +159,7 @@ def run_trained_genome_in_display_wrapper(genome, neat_config):
     should_display_game_screen = config.get_should_display_game_screen()
     should_force_30_fps = config.get_should_force_30_fps()
 
+# move these values to consts
     bird = Bird(230, 350)
     base = Base(730)
     pipes = [Pipe(600)]
