@@ -151,7 +151,7 @@ def learn(learning_birds, pipes, base, score):
     max_score = config.get_max_score()
     if score > max_score:
         raise Exception(
-            f"Score over {max_score}. Assuming the bird is going to go forever. Stopping the evolution.")
+            f"\nScore over {max_score}. Assuming the bird is going to go forever. Stopping the evolution.\n")
 
     return learning_birds, pipes, base, score
 
@@ -238,6 +238,7 @@ def run_trained_genome(bird, pipes, base, net, score):
 
     max_score = config.get_max_score()
     if score > max_score:
-        raise Exception(f"Max score of {max_score} reached. Stopping the run.")
+        raise Exception(
+            f"\nMax score of {max_score} reached. Stopping the run.")
 
     return score

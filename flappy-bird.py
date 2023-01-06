@@ -1,7 +1,7 @@
 
 import pygame  # noqa
 pygame.font.init()  # noqa
-from main.neural_networks.neural_network import learn_in_display_wrapper, run_trained_genome_in_display_wrapper
+from main.neural_networks.neat import learn_in_display_wrapper, run_trained_genome_in_display_wrapper
 from main.standalone_game import run_standalone_game
 from utils.pickle_utils import save_genome, load_genome, create_genome_directories
 from utils.config_utils import read_main_config, get_neat_config

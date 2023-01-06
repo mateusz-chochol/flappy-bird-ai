@@ -1,6 +1,8 @@
 [GENERAL_SETTINGS]
 # possible values: "learn", "run_trained", "play_standalone_game"
 run_mode = "learn"
+# possible values: "neat", "q-learning"
+learning_algorithm = "neat"
 
 [LEARN_SETTINGS]
 number_of_generations = 300
@@ -11,9 +13,9 @@ should_repeat_difficult_sections = True
 number_of_fails_before_repeating = 3
 
 [RUN_TRAINED_SETTINGS]
-genome_name = "no_randomness_300_generations"
+genome_name = "no_randomness_300_generations_with_repeats_3"
 genome_directory = "300 generations"
-neuron_directory = "1 neuron"
+neuron_directory = "5 neuron"
 max_score = 400
 
 [DISPLAY_SETTINGS]
