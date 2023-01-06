@@ -11,7 +11,7 @@ NEAT:
   (it always got stuck on some set point really late into the map and it wasn't evolving further fast enough [or at all])
 
   Training_mode "no_randomness" together with repeating difficult sections after 3 attempts resulted in finding a solution under 300 generations
-  - 100th generation for 0 neurons in the hidden layer
+  - 108th generation for 0 neurons in the hidden layer
   - 201th generation for 1 neuron in the hidden layer
   - 152th generation for 2 neurons in the hidden layer
   - 262th generation for 3 neurons in the hidden layer

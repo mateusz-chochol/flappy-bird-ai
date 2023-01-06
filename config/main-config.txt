@@ -1,8 +1,6 @@
 [GENERAL_SETTINGS]
 # possible values: "learn", "run_trained", "play_standalone_game"
 run_mode = "learn"
-# possible values: "neat", "q-learning"
-learning_algorithm = "neat"
 
 [LEARN_SETTINGS]
 number_of_generations = 300
@@ -19,7 +17,7 @@ neuron_directory = "5 neuron"
 max_score = 400
 
 [DISPLAY_SETTINGS]
-should_display_game_screen = False
+should_display_game_screen = True
 should_force_30_fps = False
 
 [GAME_SETTINGS]
