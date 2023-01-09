@@ -1,2 +1,6 @@
-model_checkpoint_path: "random-20000"
-all_model_checkpoint_paths: "random-20000"
+model_checkpoint_path: "random-80000"
+all_model_checkpoint_paths: "random-40000"
+all_model_checkpoint_paths: "random-50000"
+all_model_checkpoint_paths: "random-60000"
+all_model_checkpoint_paths: "random-70000"
+all_model_checkpoint_paths: "random-80000"

@@ -200,7 +200,7 @@ def learn_with_deep_q_learning():
         elif iterations_counter > OBSERVE_MAX_ITERATIONS and iterations_counter <= OBSERVE_MAX_ITERATIONS + EXPLORE:
             current_learning_state = "explore"
 
-        print(f"Iteration: {iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, Q_max: {np.max(readout_table)}")
+        print(f"Iteration: {iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
 
 
 def learn_iteration(bird, pipes, base, score, should_bird_jump):
