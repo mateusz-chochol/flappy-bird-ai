@@ -6,10 +6,12 @@ And then take this genome and train it on smaller gaps + moving pipes (and compa
 
 Environments to train in:
 
-1. Random map every time
-2. The same map every time
-3. The same map every time with repeating difficult sections after 3 failed encounters in the same point on the map
-4. Test NEAT with 1 - 10 and 15 neurons in the hidden layer
+1. NEAT - Random map every time
+2. NEAT - The same map every time
+3. NEAT - The same map every time with repeating difficult sections after 3 failed encounters in the same point on the map
+4. NEAT - Test with 1 - 10 and 15 neurons in the hidden layer (Done)
+5. Deep Q-Learning - The same map every time
+6. Deep Q-Learning - The same map every time with repeating difficult sections after 3 failed encounters in the same point on the map
 
 Regarding the repeats - maybe a good strategy would be to not reset fitness of the genomes back to 0 when repeating the difficult sections, but scale it down a bit (so still the best genome is the one that got the highest previously)
 

@@ -24,4 +24,4 @@ NEAT:
   - 145th generation for 10 neurons in the hidden layer
   - 182th generation for 15 neurons in the hidden layer
 
-Q-Learning:
+Deep Q-Learning:

@@ -1,15 +1,17 @@
 
 import pygame  # noqa
 pygame.font.init()  # noqa
-from main.neural_networks.neat import learn_in_display_wrapper, run_trained_genome_in_display_wrapper
+from middleware.LoggingMiddleware import LoggingMiddleware
+from main.neural_networks.deep_q_learning.deep_q_learning import learn_with_deep_q_learning
+from main.neural_networks.neat.neat import learn_with_neat, run_neat_trained_agent
 from main.standalone_game import run_standalone_game
-from utils.pickle_utils import save_genome, load_genome, create_genome_directories
 from utils.config_utils import read_main_config, get_neat_config
+from utils.os_utils import create_necessarry_directories
 from globals.config import config
 from globals.custom_random import custom_random
-from middleware.LoggingMiddleware import LoggingMiddleware
 import os
-import neat
+
+# maybe remove background so its simillar to that of Deep Q Learning
 
 if __name__ == "__main__":
     local_dir = os.path.dirname(__file__)
@@ -19,27 +21,22 @@ if __name__ == "__main__":
     config.set_config(main_config, neat_config)
 
     custom_random.set_randomizer_settings()
-
-    create_genome_directories()
+    create_necessarry_directories()
 
     run_mode = config.get_run_mode()
+    algorithm = config.get_algorithm()
 
-    if run_mode == "learn":
-        with LoggingMiddleware():
-            number_of_generations = config.get_number_of_generations()
-            population = neat.Population(neat_config)
-            population.add_reporter(neat.StdOutReporter(True))
-            population.add_reporter(neat.StatisticsReporter())
-
-            winner_model = population.run(
-                learn_in_display_wrapper, number_of_generations)
-
-            print(f"Best genome: {winner_model}")
-
-        save_genome(winner_model)
-    elif run_mode == "run_trained":
-        loaded_genome = load_genome()
-        run_trained_genome_in_display_wrapper(loaded_genome, neat_config)
-    elif run_mode == "play_standalone_game":
-        while True:
-            run_standalone_game()
+    with LoggingMiddleware():
+        if run_mode == "learn":
+            if algorithm == "neat":
+                learn_with_neat(neat_config)
+            elif algorithm == "deep_q_learning":
+                learn_with_deep_q_learning()
+        elif run_mode == "run_trained":
+            if algorithm == "neat":
+                run_neat_trained_agent(neat_config)
+            elif algorithm == "deep_q_learning":
+                raise Exception("Not implemented")
+        elif run_mode == "play_standalone_game":
+            while True:
+                run_standalone_game()

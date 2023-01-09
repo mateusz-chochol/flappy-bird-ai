@@ -14,6 +14,7 @@ class Pipe:
         self.current_y_displacement = 0
         self.BOTTOM_PIPE_IMG = consts.BOTTOM_PIPE_IMG
         self.TOP_PIPE_IMG = consts.TOP_PIPE_IMG
+        self.has_been_reached = False
         self.has_been_passed = False
         self.set_height()
 
