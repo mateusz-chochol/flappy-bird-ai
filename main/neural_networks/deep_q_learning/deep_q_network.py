@@ -5,8 +5,8 @@ from utils.tensorflow_utils import get_bias_variable, get_conv2d, get_max_pool_2
 
 NUMBER_OF_ALLOWED_ACTIONS = 2  # number of valid actions
 GAMMA = 0.99  # decay rate of past observations
-OBSERVE_MAX_ITERATIONS = 100000.  # timesteps to observe before training
-EXPLORE = 2000000.  # frames over which to anneal epsilon
+OBSERVE_MAX_ITERATIONS = 100000  # timesteps to observe before training
+EXPLORE = 2000000  # frames over which to anneal epsilon
 FINAL_EPSILON = 0.0001  # final value of epsilon
 INITIAL_EPSILON = 0.0075  # starting value of epsilon
 REPLAY_MEMORY_MAX_SIZE = 50000  # number of previous transitions to remember

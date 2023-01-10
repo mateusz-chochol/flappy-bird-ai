@@ -139,9 +139,9 @@ def learn_with_deep_q_learning():
         actions_table = np.zeros([NUMBER_OF_ALLOWED_ACTIONS])
         chosen_action_index = 0
 
-        epsilon_to_use_to_determin_random_action = epsilon if iterations_counter > OBSERVE_MAX_ITERATIONS else INITIAL_EPSILON
+        epsilon_to_use_to_determine_random_action = epsilon if iterations_counter > OBSERVE_MAX_ITERATIONS else INITIAL_EPSILON
 
-        if random.random() <= epsilon_to_use_to_determin_random_action:
+        if random.random() <= epsilon_to_use_to_determine_random_action:
             print("Perfoming an random action")
             chosen_action_index = random.randrange(
                 NUMBER_OF_ALLOWED_ACTIONS)
@@ -233,7 +233,7 @@ def learn_with_deep_q_learning():
         if total_iterations_counter % 10000 == 0 and current_learning_state != "observe":
             save_agent(saver, tensorflow_session, total_iterations_counter)
 
-        print(f"Iteration: {total_iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
+        print(f"Iteration: {total_iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon_to_use_to_determine_random_action}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
 
 
 def learn_iteration(bird, pipes, base, score, should_bird_jump):

@@ -11,8 +11,6 @@ from globals.config import config
 from globals.custom_random import custom_random
 import os
 
-# maybe remove background so its simillar to that of Deep Q Learning
-
 if __name__ == "__main__":
     local_dir = os.path.dirname(__file__)
 
