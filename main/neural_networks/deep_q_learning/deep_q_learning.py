@@ -32,6 +32,8 @@ def reset_game_state():
 
     return bird, base, pipes, score
 
+# last epsilon = 0.0004555885000743834
+
 
 def learn_with_deep_q_learning():
     # make 2-3 functions out of this (like in neat)
