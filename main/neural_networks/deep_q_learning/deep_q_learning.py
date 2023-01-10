@@ -32,7 +32,30 @@ def reset_game_state():
 
     return bird, base, pipes, score
 
-# last epsilon = 0.0004555885000743834
+
+def get_starting_epsilon(iterations_counter):
+    # try making tests with bigger INITIAL_EPSILON in the future
+    epsilon = INITIAL_EPSILON
+
+    if iterations_counter > OBSERVE_MAX_ITERATIONS:
+        for _ in range(0, int(iterations_counter - OBSERVE_MAX_ITERATIONS)):
+            if epsilon > FINAL_EPSILON:
+                epsilon -= (INITIAL_EPSILON - FINAL_EPSILON) / EXPLORE
+            else:
+                epsilon = FINAL_EPSILON
+                break
+
+    return epsilon
+
+
+def get_current_learning_state(iterations_counter):
+    if iterations_counter <= OBSERVE_MAX_ITERATIONS:
+        return "observe"
+    else:
+        if iterations_counter > OBSERVE_MAX_ITERATIONS and iterations_counter <= OBSERVE_MAX_ITERATIONS + EXPLORE:
+            return "explore"
+        else:
+            return "train"
 
 
 def learn_with_deep_q_learning():
@@ -91,12 +114,14 @@ def learn_with_deep_q_learning():
     tensorflow_session.run(tf.compat.v1.initialize_all_variables())
     saver = tf.compat.v1.train.Saver()
 
-    epsilon = INITIAL_EPSILON
+    total_iterations_counter = 0
     iterations_counter = 0
 
     if config.get_should_use_checkpoint():
-        iterations_counter = int(load_agent_from_checkpoint(
+        total_iterations_counter = int(load_agent_from_checkpoint(
             saver, tensorflow_session)) + 1
+
+    epsilon = get_starting_epsilon(total_iterations_counter)
 
     while True:
         for event in pygame.event.get():
@@ -114,7 +139,9 @@ def learn_with_deep_q_learning():
         actions_table = np.zeros([NUMBER_OF_ALLOWED_ACTIONS])
         chosen_action_index = 0
 
-        if random.random() <= epsilon:
+        epsilon_to_use_to_determin_random_action = epsilon if iterations_counter > OBSERVE_MAX_ITERATIONS else INITIAL_EPSILON
+
+        if random.random() <= epsilon_to_use_to_determin_random_action:
             print("Perfoming an random action")
             chosen_action_index = random.randrange(
                 NUMBER_OF_ALLOWED_ACTIONS)
@@ -126,8 +153,11 @@ def learn_with_deep_q_learning():
         if actions_table[0] == actions_table[1]:
             raise Exception("Invalid action table.")
 
-        if epsilon > FINAL_EPSILON and iterations_counter > OBSERVE_MAX_ITERATIONS:
-            epsilon -= (INITIAL_EPSILON - FINAL_EPSILON) / EXPLORE
+        if iterations_counter > OBSERVE_MAX_ITERATIONS:
+            if epsilon > FINAL_EPSILON:
+                epsilon -= (INITIAL_EPSILON - FINAL_EPSILON) / EXPLORE
+            else:
+                epsilon = FINAL_EPSILON
 
         try:
             should_bird_jump = True if actions_table[1] == 1 else False
@@ -190,19 +220,20 @@ def learn_with_deep_q_learning():
 
         # update the old values
         s_t = s_t1
-        iterations_counter += 1
 
-        if iterations_counter % 10000 == 0:
-            save_agent(saver, tensorflow_session, iterations_counter)
-
-        current_learning_state = "train"
+        total_iterations_counter += 1
 
         if iterations_counter <= OBSERVE_MAX_ITERATIONS:
-            current_learning_state = "observe"
-        elif iterations_counter > OBSERVE_MAX_ITERATIONS and iterations_counter <= OBSERVE_MAX_ITERATIONS + EXPLORE:
-            current_learning_state = "explore"
+            iterations_counter += 1
+        else:
+            iterations_counter = total_iterations_counter
 
-        print(f"Iteration: {iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
+        current_learning_state = get_current_learning_state(iterations_counter)
+
+        if total_iterations_counter % 10000 == 0 and current_learning_state != "observe":
+            save_agent(saver, tensorflow_session, total_iterations_counter)
+
+        print(f"Iteration: {total_iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
 
 
 def learn_iteration(bird, pipes, base, score, should_bird_jump):
