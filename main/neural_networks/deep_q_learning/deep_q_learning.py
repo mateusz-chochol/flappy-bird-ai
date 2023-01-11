@@ -229,7 +229,7 @@ def learn_with_deep_q_learning():
 
         current_learning_state = get_current_learning_state(iterations_counter)
 
-        if total_iterations_counter % 10000 == 0:
+        if total_iterations_counter % 10000 == 0 and current_learning_state != "observe":
             save_agent(saver, tensorflow_session, total_iterations_counter)
 
         print(f"Iteration: {total_iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon_to_use_to_determine_random_action}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
