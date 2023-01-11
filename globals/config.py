@@ -54,6 +54,12 @@ class Config:
                 self.number_of_fails_before_repeating = int(
                     main_config["LEARN_SETTINGS"]["number_of_fails_before_repeating"])
 
+            self.logs_path = ""
+            self.set_logs_path()
+
+            self.agent_path = ""
+            self.set_agent_path()
+
         elif self.run_mode == "run_trained":
             self.max_score = int(
                 main_config["RUN_TRAINED_SETTINGS"]["max_score"])
@@ -167,6 +173,12 @@ class Config:
             "Program was not run in the \"learn\" mode or setting \"should_repeat_difficult_sections\" was set to \"False\"")
 
     def get_logs_path(self):
+        return self.logs_path
+
+    def get_agent_path(self):
+        return self.agent_path
+
+    def set_logs_path(self):
         if self.run_mode != "learn":
             raise Exception("Program was not run in the \"learn\" mode.")
 
@@ -206,9 +218,13 @@ class Config:
             while os.path.exists(f"{logs_pathname}.txt"):
                 logs_pathname = f"{logs_pathname}_1"
 
-            return f"{logs_pathname}.txt"
+        self.logs_path = f"{logs_pathname}.txt"
 
-    def get_agent_path(self):
+    def set_agent_path(self):
+        if self.run_mode != "learn" and self.run_mode != "run_trained":
+            raise Exception(
+                "Program was not run in the \"learn\" or \"run_trained\" mode.")
+
         if self.algorithm == "neat":
             if self.run_mode == "learn":
                 genome_relative_path = f"{SAVED_AGENTS_DIR}\\{NEAT_DIR}\\{self.hidden_neuron_count} neuron\\{self.number_of_generations} generations\\"
@@ -223,10 +239,10 @@ class Config:
                 while os.path.exists(f"{genome_pathname}.sav"):
                     genome_pathname = f"{genome_pathname}_1"
 
-                return f"{genome_pathname}.sav"
+                self.agent_path = f"{genome_pathname}.sav"
             elif self.run_mode == "run_trained":
-                return f"{SAVED_AGENTS_DIR}\\{NEAT_DIR}\\{self.neuron_directory}\\{self.genome_directory}\\{self.genome_name}.sav"
-        elif self.algorithm == "deep_q_learning":
+                self.agent_path = f"{SAVED_AGENTS_DIR}\\{NEAT_DIR}\\{self.neuron_directory}\\{self.genome_directory}\\{self.genome_name}.sav"
+        else:
             if self.run_mode == "learn":
                 agent_relative_path = f"{SAVED_AGENTS_DIR}\\{DEEP_Q_LEARNING_DIR}\\"
                 agent_filename = self.training_mode
@@ -247,12 +263,9 @@ class Config:
                 agent_pathname = os.path.join(
                     agent_configuration_pathname, agent_filename)
 
-                return agent_pathname
-            elif self.run_mode == "run_trained":
+                self.agent_path = agent_pathname
+            else:
                 raise Exception("Not implemented")
-
-        raise Exception(
-            "Program was not run in the \"learn\" or \"run_trained\" mode.")
 
     def get_checkpoint_path(self):
         if not self.should_use_checkpoint:

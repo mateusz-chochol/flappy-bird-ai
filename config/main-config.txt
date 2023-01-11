@@ -6,16 +6,16 @@ algorithm = "deep_q_learning"
 
 [LEARN_SETTINGS]
 # possible values: "random", "no_randomness"
-training_mode = "random"
+training_mode = "no_randomness"
 max_score = 400
-should_repeat_difficult_sections = True
+should_repeat_difficult_sections = False
 number_of_fails_before_repeating = 3
 
 [NEAT_LEARN_SETTINGS]
 number_of_generations = 40
 
 [DEEP_Q_LEARNING_LEARN_SETTINGS]
-should_use_checkpoint = True
+should_use_checkpoint = False
 configuration_number_for_checkpoint = 0
 
 [RUN_TRAINED_SETTINGS]

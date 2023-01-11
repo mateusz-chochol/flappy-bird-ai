@@ -8,7 +8,7 @@ GAMMA = 0.99  # decay rate of past observations
 OBSERVE_MAX_ITERATIONS = 100000  # timesteps to observe before training
 EXPLORE = 2000000  # frames over which to anneal epsilon
 FINAL_EPSILON = 0.0001  # final value of epsilon
-INITIAL_EPSILON = 0.0075  # starting value of epsilon
+INITIAL_EPSILON = 0.01  # starting value of epsilon
 REPLAY_MEMORY_MAX_SIZE = 50000  # number of previous transitions to remember
 MINIBATCH_SIZE = 32  # size of minibatch
 
