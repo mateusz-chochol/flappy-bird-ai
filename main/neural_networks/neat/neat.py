@@ -5,10 +5,9 @@ import utils.constants as consts
 from models.bird import Bird
 from models.pipe import Pipe
 from models.base import Base
-from models.learning_bird import LearningBird
+from main.neural_networks.neat.learning_bird import LearningBird
 from globals.custom_random import custom_random
 from globals.config import config
-from utils.os_utils import create_neat_genome_directories
 from utils.pickle_utils import load_genome, save_genome
 from utils.window_utils import draw_window
 
@@ -33,7 +32,7 @@ def learn_with_neat(neat_config):
     save_genome(winner_model)
 
 
-def run_neat_trained_agent(neat_config):
+def run_neat_trained_agent_with_neat(neat_config):
     loaded_genome = load_genome()
     run_trained_genome_in_display_wrapper(loaded_genome, neat_config)
 
@@ -79,7 +78,7 @@ def learn_in_display_wrapper(genomes, neat_config):
 
     while is_running:
         try:
-            learning_birds, pipes, base, score = learn_iteration(
+            learning_birds, pipes, base, score = run_iteration(
                 learning_birds, pipes, base, score)
         except Exception as e:
             print(e)
@@ -107,7 +106,7 @@ def learn_in_display_wrapper(genomes, neat_config):
             IS_REPEATING_DIFFICULT_SECTION = False
 
 
-def learn_iteration(learning_birds, pipes, base, score):
+def run_iteration(learning_birds, pipes, base, score):
     base.move()
 
     next_pipe_to_pass_index = 0

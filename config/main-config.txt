@@ -6,7 +6,7 @@ algorithm = "deep_q_learning"
 
 [LEARN_SETTINGS]
 # possible values: "random", "no_randomness"
-training_mode = "no_randomness"
+training_mode = "random"
 max_score = 400
 should_repeat_difficult_sections = False
 number_of_fails_before_repeating = 3
@@ -15,7 +15,7 @@ number_of_fails_before_repeating = 3
 number_of_generations = 40
 
 [DEEP_Q_LEARNING_LEARN_SETTINGS]
-should_use_checkpoint = False
+should_use_checkpoint = True
 configuration_number_for_checkpoint = 0
 
 [RUN_TRAINED_SETTINGS]
@@ -25,6 +25,9 @@ max_score = 400
 genome_name = "no_randomness_300_generations_with_repeats_3"
 genome_directory = "300 generations"
 neuron_directory = "5 neuron"
+
+[DEEP_Q_LEARNING_RUN_TRAINED_SETTINGS]
+checkpoint_directory = "random_1_1_1"
 
 [DISPLAY_SETTINGS]
 should_display_game_screen = True

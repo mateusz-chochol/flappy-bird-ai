@@ -53,11 +53,13 @@ def create_deep_q_learning_agent_directories():
 
 
 def create_necessarry_directories():
+    run_mode = config.get_run_mode()
     algorithm = config.get_algorithm()
 
-    if algorithm == "neat":
-        create_neat_genome_directories()
-    elif algorithm == "deep_q_learning":
-        create_deep_q_learning_agent_directories()
+    if run_mode == "learn":
+        if algorithm == "neat":
+            create_neat_genome_directories()
+        elif algorithm == "deep_q_learning":
+            create_deep_q_learning_agent_directories()
 
 # it can be transformed into more general solution (just go down the tree, retrieve the name of the next directory and create it)

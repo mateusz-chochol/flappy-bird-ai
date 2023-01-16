@@ -1,5 +1,5 @@
 import pygame
-from main.neural_networks.deep_q_learning.deep_q_network import EXPLORE, FINAL_EPSILON, GAMMA, INITIAL_EPSILON, MINIBATCH_SIZE, NUMBER_OF_ALLOWED_ACTIONS, OBSERVE_MAX_ITERATIONS, REPLAY_MEMORY_MAX_SIZE, createNetwork
+from main.neural_networks.deep_q_learning.deep_q_network import EXPLORE, FINAL_EPSILON, GAMMA, INITIAL_EPSILON, MINIBATCH_SIZE, NUMBER_OF_ALLOWED_ACTIONS, OBSERVE_MAX_ITERATIONS, PROBABILITY_OF_JUMPING_WHEN_CHOOSING_AT_RANDOM, REPLAY_MEMORY_MAX_SIZE, createNetwork
 import utils.constants as consts
 import numpy as np
 import tensorflow as tf
@@ -11,7 +11,6 @@ from globals.custom_random import custom_random
 from globals.config import config
 from utils.tensorflow_utils import save_agent, load_agent_from_checkpoint
 from utils.window_utils import draw_window
-from utils.os_utils import create_deep_q_learning_agent_directories
 from utils.opencv_utils import convert_all_images_to_alpha, convert_frame_to_binary
 from collections import deque
 
@@ -22,8 +21,30 @@ NUMBER_OF_FAILS_AT_THE_SAME_POINT = 0
 IS_REPEATING_DIFFICULT_SECTION = False
 
 
-def reset_game_state():
-    custom_random.reset_seed_if_necessarry()
+def reset_game_state(previous_score, should_repeat_difficult_sections=False, current_learning_state="observe"):
+    global LAST_FAILED_SCORE
+    global NUMBER_OF_FAILS_AT_THE_SAME_POINT
+    global IS_REPEATING_DIFFICULT_SECTION
+
+    if current_learning_state != "observe":
+        custom_random.reset_seed_if_necessarry()
+
+        if should_repeat_difficult_sections:
+            if previous_score != LAST_FAILED_SCORE:
+                NUMBER_OF_FAILS_AT_THE_SAME_POINT = 0
+
+            LAST_FAILED_SCORE = previous_score
+            NUMBER_OF_FAILS_AT_THE_SAME_POINT += 1
+
+            if previous_score > 0:
+                IS_REPEATING_DIFFICULT_SECTION = False
+
+        if (should_repeat_difficult_sections and NUMBER_OF_FAILS_AT_THE_SAME_POINT >= config.get_number_of_fails_before_repeating()) or IS_REPEATING_DIFFICULT_SECTION:
+            if LAST_FAILED_SCORE != 0:
+                print(
+                    f"Generating difficult section (seen at score: {LAST_FAILED_SCORE})\n")
+            custom_random.setstate(custom_random.get_previous_state())
+            IS_REPEATING_DIFFICULT_SECTION = True
 
     bird = Bird(230, 350)
     base = Base(730)
@@ -66,17 +87,11 @@ def learn_with_deep_q_learning():
     global GENERATION_NUMBER
     GENERATION_NUMBER += 1
 
-    create_deep_q_learning_agent_directories()
-
-    should_display_game_screen = config.get_should_display_game_screen()
     should_force_30_fps = config.get_should_force_30_fps()
-    # should_repeat_difficult_sections = config.get_should_repeat_difficult_sections()
+    should_repeat_difficult_sections = config.get_should_repeat_difficult_sections()
 
-    custom_random.reset_seed_if_necessarry()
-
-    window = pygame.display.set_mode(
-        (consts.WIN_WIDTH, consts.WIN_HEIGHT)) if should_display_game_screen else None
-    clock = pygame.time.Clock() if should_display_game_screen and should_force_30_fps else None
+    window = pygame.display.set_mode((consts.WIN_WIDTH, consts.WIN_HEIGHT))
+    clock = pygame.time.Clock() if should_force_30_fps else None
 
     convert_all_images_to_alpha()
     bird = Bird(230, 350)
@@ -85,6 +100,9 @@ def learn_with_deep_q_learning():
     score = 0
     highest_score_so_far = 0
     reward = 0
+    episode_counter = 0
+    episode_reward = 0
+    average_episode_reward = 0
 
     replay_memory = deque()
 
@@ -100,14 +118,14 @@ def learn_with_deep_q_learning():
     cost = tf.reduce_mean(tf.square(y - readout_action))
     train_step = tf.compat.v1.train.AdamOptimizer(1e-6).minimize(cost)
 
-    learn_iteration(bird, pipes, base, score, False)
+    run_iteration(bird, pipes, base, score, False)
 
     game_frame_to_analyze = pygame.surfarray.array3d(
         pygame.display.get_surface())
     game_frame_to_analyze = convert_frame_to_binary(
         game_frame_to_analyze, 80, 80)
-    s_t = np.stack((game_frame_to_analyze, game_frame_to_analyze,
-                   game_frame_to_analyze, game_frame_to_analyze), axis=2)
+    previous_last_4_frames_stack = np.stack((game_frame_to_analyze, game_frame_to_analyze,
+                                             game_frame_to_analyze, game_frame_to_analyze), axis=2)
 
     # saving and loading networks
     tensorflow_session.run(tf.compat.v1.initialize_all_variables())
@@ -134,17 +152,18 @@ def learn_with_deep_q_learning():
         draw_window(window, [bird], pipes, base)
 
         did_fail = False
-        readout_table = readout.eval(feed_dict={s: [s_t]})[0]
+        readout_table = readout.eval(
+            feed_dict={s: [previous_last_4_frames_stack]})[0]
         actions_table = np.zeros([NUMBER_OF_ALLOWED_ACTIONS])
         chosen_action_index = 0
 
-        epsilon_to_use_to_determine_random_action = epsilon if iterations_counter > OBSERVE_MAX_ITERATIONS else INITIAL_EPSILON
+        if random.random() <= epsilon:
+            print("Perfoming random action")
 
-        if random.random() <= epsilon_to_use_to_determine_random_action:
-            print("Perfoming an random action")
-            chosen_action_index = random.randrange(
-                NUMBER_OF_ALLOWED_ACTIONS)
-            actions_table[random.randrange(NUMBER_OF_ALLOWED_ACTIONS)] = 1
+            if random.random() <= PROBABILITY_OF_JUMPING_WHEN_CHOOSING_AT_RANDOM:
+                chosen_action_index = 1
+
+            actions_table[chosen_action_index] = 1
         else:
             chosen_action_index = np.argmax(readout_table)
             actions_table[chosen_action_index] = 1
@@ -160,27 +179,36 @@ def learn_with_deep_q_learning():
 
         try:
             should_bird_jump = True if actions_table[1] == 1 else False
-            score, reward = learn_iteration(
+            score, reward = run_iteration(
                 bird, pipes, base, score, should_bird_jump)
+
+            episode_reward += reward
 
             if score > highest_score_so_far:
                 highest_score_so_far = score
         except Exception as e:
             print(e)
             reward = -1
+
+            if iterations_counter > OBSERVE_MAX_ITERATIONS:
+                average_episode_reward = (
+                    average_episode_reward * episode_counter + episode_reward) / (episode_counter + 1)
+                episode_counter += 1
+
+            episode_reward = 0
             did_fail = True
-            bird, base, pipes, score = reset_game_state()
+            bird, base, pipes, score = reset_game_state(
+                score, should_repeat_difficult_sections, get_current_learning_state(iterations_counter))
 
         next_game_frame = pygame.surfarray.array3d(
             pygame.display.get_surface())
-
-        pygame.display.update()
-
         next_game_frame = convert_frame_to_binary(next_game_frame, 80, 80)
         next_game_frame = np.reshape(next_game_frame, (80, 80, 1))
-        s_t1 = np.append(next_game_frame, s_t[:, :, :3], axis=2)
+        current_last_4_frames_stack = np.append(
+            next_game_frame, previous_last_4_frames_stack[:, :, :3], axis=2)
 
-        replay_memory.append((s_t, actions_table, reward, s_t1, did_fail))
+        replay_memory.append(
+            (previous_last_4_frames_stack, actions_table, reward, current_last_4_frames_stack, did_fail))
         if len(replay_memory) > REPLAY_MEMORY_MAX_SIZE:
             replay_memory.popleft()
 
@@ -188,37 +216,36 @@ def learn_with_deep_q_learning():
             random_minibatch_to_train = random.sample(
                 replay_memory, MINIBATCH_SIZE)
 
-# what is "s_j" - s is stack but why?
-            s_j_batch = [frame_replay_memory[0]
-                         for frame_replay_memory in random_minibatch_to_train]
+            previous_last_4_frames_stack_batch = [frame_replay_memory[0]
+                                                  for frame_replay_memory in random_minibatch_to_train]
             actions_batch = [frame_replay_memory[1]
                              for frame_replay_memory in random_minibatch_to_train]
             rewards_batch = [frame_replay_memory[2]
                              for frame_replay_memory in random_minibatch_to_train]
-            s_j1_batch = [frame_replay_memory[3]
-                          for frame_replay_memory in random_minibatch_to_train]
+            current_last_4_frames_stack_batch = [frame_replay_memory[3]
+                                                 for frame_replay_memory in random_minibatch_to_train]
 
-            y_batch = []
-            readout_j1_batch = readout.eval(feed_dict={s: s_j1_batch})
+            updated_rewards_batch = []
+            readout_j1_batch = readout.eval(
+                feed_dict={s: current_last_4_frames_stack_batch})
 
             for i in range(0, len(random_minibatch_to_train)):
                 did_fail = random_minibatch_to_train[i][4]
 
                 if did_fail:
-                    y_batch.append(rewards_batch[i])
+                    updated_rewards_batch.append(rewards_batch[i])
                 else:
                     # update after reward?
-                    y_batch.append(rewards_batch[i] + GAMMA *
-                                   np.max(readout_j1_batch[i]))
+                    updated_rewards_batch.append(rewards_batch[i] + GAMMA *
+                                                 np.max(readout_j1_batch[i]))
 
             train_step.run(feed_dict={
-                y: y_batch,
+                y: updated_rewards_batch,
                 a: actions_batch,
-                s: s_j_batch}
+                s: previous_last_4_frames_stack_batch}
             )
 
-        # update the old values
-        s_t = s_t1
+        previous_last_4_frames_stack = current_last_4_frames_stack
 
         total_iterations_counter += 1
 
@@ -229,13 +256,97 @@ def learn_with_deep_q_learning():
 
         current_learning_state = get_current_learning_state(iterations_counter)
 
-        if total_iterations_counter % 10000 == 0 and current_learning_state != "observe":
+        if total_iterations_counter % 500000 == 0 and current_learning_state != "observe":
             save_agent(saver, tensorflow_session, total_iterations_counter)
 
-        print(f"Iteration: {total_iterations_counter}, learning state: {current_learning_state}, epsilon: {epsilon_to_use_to_determine_random_action}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, reward: {reward}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
+        print(f"Iteration: {total_iterations_counter}, learning state: {current_learning_state}, epsilon: {round(epsilon, 8)}, did jump: {'Yes' if chosen_action_index == 1 else 'No'}, episode_reward: {round(episode_reward, 1)}, average_episode_reward: {round(average_episode_reward, 5)}, highest score: {highest_score_so_far}, Q_max: {np.max(readout_table)}")
 
 
-def learn_iteration(bird, pipes, base, score, should_bird_jump):
+def run_trained_agent_with_deep_q_learning():
+    global LAST_FAILED_SCORE
+    global NUMBER_OF_FAILS_AT_THE_SAME_POINT
+    global IS_REPEATING_DIFFICULT_SECTION
+    global GENERATION_NUMBER
+    GENERATION_NUMBER += 1
+
+    should_force_30_fps = config.get_should_force_30_fps()
+
+    custom_random.reset_seed_if_necessarry()
+
+    window = pygame.display.set_mode((consts.WIN_WIDTH, consts.WIN_HEIGHT))
+    clock = pygame.time.Clock() if should_force_30_fps else None
+
+    convert_all_images_to_alpha()
+    bird = Bird(230, 350)
+    base = Base(730)
+    pipes = [Pipe(600)]
+    score = 0
+    average_score = 0
+    episodes_counter = 0
+
+    tf.compat.v1.disable_eager_execution()
+    tensorflow_session = tf.compat.v1.InteractiveSession()
+    s, readout, _ = createNetwork()
+
+    run_iteration(bird, pipes, base, score, False)
+
+    game_frame_to_analyze = pygame.surfarray.array3d(
+        pygame.display.get_surface())
+    game_frame_to_analyze = convert_frame_to_binary(
+        game_frame_to_analyze, 80, 80)
+    previous_last_4_frames_stack = np.stack((game_frame_to_analyze, game_frame_to_analyze,
+                                             game_frame_to_analyze, game_frame_to_analyze), axis=2)
+
+    tensorflow_session.run(tf.compat.v1.initialize_all_variables())
+    saver = tf.compat.v1.train.Saver()
+
+    load_agent_from_checkpoint(saver, tensorflow_session)
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+
+        if clock:
+            clock.tick(30)
+
+        draw_window(window, [bird], pipes, base)
+
+        readout_table = readout.eval(
+            feed_dict={s: [previous_last_4_frames_stack]})[0]
+        actions_table = np.zeros([NUMBER_OF_ALLOWED_ACTIONS])
+
+        chosen_action_index = np.argmax(readout_table)
+        actions_table[chosen_action_index] = 1
+
+        if actions_table[0] == actions_table[1]:
+            raise Exception("Invalid action table.")
+
+        try:
+            should_bird_jump = True if actions_table[1] == 1 else False
+            score, _ = run_iteration(
+                bird, pipes, base, score, should_bird_jump)
+        except Exception as e:
+            print(e)
+            average_score = (average_score * episodes_counter +
+                             score) / (episodes_counter + 1)
+            episodes_counter += 1
+            print(
+                f"Average score over {episodes_counter} episodes: {average_score}")
+            bird, base, pipes, score = reset_game_state(score)
+
+        next_game_frame = pygame.surfarray.array3d(
+            pygame.display.get_surface())
+        next_game_frame = convert_frame_to_binary(next_game_frame, 80, 80)
+        next_game_frame = np.reshape(next_game_frame, (80, 80, 1))
+        current_last_4_frames_stack = np.append(
+            next_game_frame, previous_last_4_frames_stack[:, :, :3], axis=2)
+
+        previous_last_4_frames_stack = current_last_4_frames_stack
+
+
+def run_iteration(bird, pipes, base, score, should_bird_jump):
     reward = 0.1
 
     if should_bird_jump:

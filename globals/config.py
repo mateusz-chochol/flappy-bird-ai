@@ -57,9 +57,6 @@ class Config:
             self.logs_path = ""
             self.set_logs_path()
 
-            self.agent_path = ""
-            self.set_agent_path()
-
         elif self.run_mode == "run_trained":
             self.max_score = int(
                 main_config["RUN_TRAINED_SETTINGS"]["max_score"])
@@ -72,7 +69,11 @@ class Config:
                 self.neuron_directory = main_config["NEAT_RUN_TRAINED_SETTINGS"]["neuron_directory"].strip(
                     '"')
             elif self.algorithm == "deep_q_learning":
-                raise Exception("Not implemented")
+                self.checkpoint_directory = main_config["DEEP_Q_LEARNING_RUN_TRAINED_SETTINGS"]["checkpoint_directory"].strip(
+                    '"')
+
+        self.agent_path = ""
+        self.set_agent_path()
 
         self.should_display_game_screen = True if main_config[
             "DISPLAY_SETTINGS"]["should_display_game_screen"] == "True" else False
@@ -210,7 +211,8 @@ class Config:
                     logs_configuration_pathname = f"{logs_configuration_pathname}_1"
 
             if self.should_use_checkpoint and self.configuration_number_for_checkpoint != 0:
-                logs_configuration_pathname = f"{logs_configuration_pathname}_{self.configuration_number_for_checkpoint}"
+                for _ in range(0, self.configuration_number_for_checkpoint):
+                    logs_configuration_pathname = f"{logs_configuration_pathname}_1"
 
             logs_pathname = os.path.join(logs_configuration_pathname, LOGS_DIR)
             logs_pathname = os.path.join(logs_pathname, logs_filename)
@@ -258,30 +260,34 @@ class Config:
                         agent_configuration_pathname = f"{agent_configuration_pathname}_1"
 
                 if self.should_use_checkpoint and self.configuration_number_for_checkpoint != 0:
-                    agent_configuration_pathname = f"{agent_configuration_pathname}_{self.configuration_number_for_checkpoint}"
+                    for _ in range(0, self.configuration_number_for_checkpoint):
+                        agent_configuration_pathname = f"{agent_configuration_pathname}_1"
 
                 agent_pathname = os.path.join(
                     agent_configuration_pathname, agent_filename)
 
                 self.agent_path = agent_pathname
             else:
-                raise Exception("Not implemented")
+                self.agent_path = f"{SAVED_AGENTS_DIR}\\{DEEP_Q_LEARNING_DIR}"
 
     def get_checkpoint_path(self):
-        if not self.should_use_checkpoint:
-            raise Exception(
-                "Program was run with the \"should_use_checkpoint\" flag turned to \"False\".")
-
         if self.algorithm != "deep_q_learning":
             raise Exception(
-                "Program was not run in the \"learn\" or \"run_trained\" mode.")
+                "Program was not run with \"deep_q_learning\" as algorithm.")
 
-        checkpoint_directory, _ = os.path.split(self.get_agent_path())
+        if self.run_mode == "learn":
+            if not self.should_use_checkpoint:
+                raise Exception(
+                    "Program was run with the \"should_use_checkpoint\" flag turned to \"False\".")
 
-        return checkpoint_directory
+            checkpoint_directory, _ = os.path.split(self.get_agent_path())
+
+            return checkpoint_directory
+
+        return f"{self.get_agent_path()}\\{self.checkpoint_directory}"
 
     def get_should_log_to_console(self):
-        return self.run_mode == "learn" and self.should_log_to_console
+        return (self.run_mode == "learn" and self.should_log_to_console) or self.run_mode == "run_trained"
 
     def get_should_log_to_file(self):
         return self.run_mode == "learn" and self.should_log_to_file

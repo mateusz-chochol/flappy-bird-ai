@@ -2,8 +2,8 @@
 import pygame  # noqa
 pygame.font.init()  # noqa
 from middleware.LoggingMiddleware import LoggingMiddleware
-from main.neural_networks.deep_q_learning.deep_q_learning import learn_with_deep_q_learning
-from main.neural_networks.neat.neat import learn_with_neat, run_neat_trained_agent
+from main.neural_networks.deep_q_learning.deep_q_learning import learn_with_deep_q_learning, run_trained_agent_with_deep_q_learning
+from main.neural_networks.neat.neat import learn_with_neat, run_neat_trained_agent_with_neat
 from main.standalone_game import run_standalone_game
 from utils.config_utils import read_main_config, get_neat_config
 from utils.os_utils import create_necessarry_directories
@@ -32,9 +32,9 @@ if __name__ == "__main__":
                 learn_with_deep_q_learning()
         elif run_mode == "run_trained":
             if algorithm == "neat":
-                run_neat_trained_agent(neat_config)
+                run_neat_trained_agent_with_neat(neat_config)
             elif algorithm == "deep_q_learning":
-                raise Exception("Not implemented")
+                run_trained_agent_with_deep_q_learning()
         elif run_mode == "play_standalone_game":
             while True:
                 run_standalone_game()
